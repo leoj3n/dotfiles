@@ -1,0 +1,6 @@
+{:	info{	:	nameI"Simple VIM:ET:descriptionI"&A simple VIM cheatsheet for tests;T:author[I"Luis Cipriani;TI"github.com/lfcipriani;T:versionI"
+1.0.0;T:cheatsheet{:	root[
+[I"Enter insertion mode;TI"i;T[I"Exit insertion mode;TI"
+<esc>;T{I"Basic Movement;T[[
+I".character left, right, line up, line down;TI"h;TI"l;TI"k;TI"j;T[I"word/token left, right;TI"b;TI"w;T{I"Scrolling;T[[I"scroll line up, down;TI"^ E;TI"^ Y;T[I"scroll page up, down;TI"^ F;TI"^ B;T{I"
+Files;T[[I"Open file;TI":e;T{I"Saving;T[[I"Save file;TI":w;T

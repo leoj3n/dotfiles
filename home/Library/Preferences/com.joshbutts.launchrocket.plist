@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>services</key>
+	<dict>
+		<key>homebrew.mxcl.dnsmasq</key>
+		<dict>
+			<key>name</key>
+			<string>Dnsmasq</string>
+			<key>plist</key>
+			<string>/usr/local/opt/dnsmasq/homebrew.mxcl.dnsmasq.plist</string>
+		</dict>
+		<key>homebrew.mxcl.mongodb</key>
+		<dict>
+			<key>name</key>
+			<string>Mongodb</string>
+			<key>plist</key>
+			<string>/usr/local/opt/mongodb/homebrew.mxcl.mongodb.plist</string>
+		</dict>
+		<key>homebrew.mxcl.mysql</key>
+		<dict>
+			<key>name</key>
+			<string>Mysql</string>
+			<key>plist</key>
+			<string>/usr/local/opt/mysql/homebrew.mxcl.mysql.plist</string>
+		</dict>
+		<key>homebrew.mxcl.nginx</key>
+		<dict>
+			<key>name</key>
+			<string>Nginx</string>
+			<key>plist</key>
+			<string>/usr/local/opt/nginx/homebrew.mxcl.nginx.plist</string>
+		</dict>
+		<key>homebrew.mxcl.php56</key>
+		<dict>
+			<key>name</key>
+			<string>Php56</string>
+			<key>plist</key>
+			<string>/usr/local/opt/php56/homebrew.mxcl.php56.plist</string>
+		</dict>
+		<key>homebrew.mxcl.privoxy</key>
+		<dict>
+			<key>name</key>
+			<string>Privoxy</string>
+			<key>plist</key>
+			<string>/usr/local/opt/privoxy/homebrew.mxcl.privoxy.plist</string>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>2</string>
+</dict>
+</plist>

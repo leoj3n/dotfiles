@@ -1,0 +1,34 @@
+{
+   "description": "Purple decorated girly cartoon Theme",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDFijL+qVsW3hEWvSPwIfre3PuetO2o+8eTRxM/k3OFY1lXhpip0z5lDSmnxi/0MfrKd7otLJ/bpuyBt6le6TnE6BD1+ABzXWQmL5gIZh6qs5OvL4wfgsc1r47PNbhnAZGVkWWGXWB0xrFKP1HGCGEp1MzAjJgDfmYhQExK8BzFwIDAQAB",
+   "manifest_version": 2,
+   "name": "Purple Cartoon",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 210, 210, 210 ],
+         "button_background": [ 11, 3, 12, 1 ],
+         "frame": [ 72, 19, 75 ],
+         "ntp_background": [ 72, 19, 75 ],
+         "ntp_text": [ 210, 210, 210 ],
+         "tab_background_text": [ 210, 210, 210 ],
+         "tab_text": [ 239, 239, 239 ],
+         "toolbar": [ 45, 11, 47 ]
+      },
+      "images": {
+         "theme_frame": "images/purple_girly_theme_yellowandred.jpg",
+         "theme_ntp_attribution": "images/yellowandred_logo.png",
+         "theme_ntp_background": "images/purple_girly_theme_yellowandred.jpg",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "left bottom",
+         "ntp_background_repeat": "no-repeat"
+      },
+      "tints": {
+         "buttons": [ 0, 0, 0.94 ]
+      }
+   },
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1"
+}

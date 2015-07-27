@@ -1,0 +1,25 @@
+"*":
+  "exception-reporting":
+    userId: "ae596f20-394a-5a05-60ba-09e8102f1bbd"
+  "release-notes":
+    viewedVersion: "0.92.0"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "30cadf70da12eaa22ed3407e1b05333d71cb432e"
+  editor:
+    fontFamily: "Menlo"
+    showIndentGuide: true
+    softWrapAtPreferredLineLength: true
+    softWrap: true
+    fontSize: 11
+    invisibles: {}
+  core:
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
+  "one-light-ui":
+    layoutMode: "Compact"
+    fontSize: 10
+  "unity-ui": {}

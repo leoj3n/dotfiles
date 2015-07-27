@@ -1,0 +1,193 @@
+[submodule "submodules/cli/manpages-tldr"]
+	path = submodules/cli/manpages-tldr
+	url = git@github.com:JIghtuse/manpages-tldr.git
+  ignore = dirty
+[submodule "submodules/osx/play-button-itunes-patch"]
+	path = submodules/osx/play-button-itunes-patch
+	url = git://github.com/thebitguru/play-button-itunes-patch.git
+  ignore = dirty
+[submodule "submodules/cli/selecta"]
+	path = submodules/cli/selecta
+	url = git@github.com:garybernhardt/selecta.git
+  ignore = dirty
+[submodule "submodules/cli/vit"]
+	path = submodules/cli/vit
+	url = https://git.tasktools.org/scm/ex/vit.git
+  ignore = dirty
+[submodule "submodules/cli/brew-cask-dotfile-generator"]
+	path = submodules/cli/brew-cask-dotfile-generator
+	url = git@github.com:seethroughtrees/brew-cask-dotfile-generator.git
+  ignore = dirty
+[submodule "submodules/cli/cloudruby"]
+	path = submodules/cli/cloudruby
+	url = https://github.com/kulpae/cloudruby.git
+  ignore = dirty
+[submodule "submodules/cli/cpulimit"]
+	path = submodules/cli/cpulimit
+	url = git://github.com/opsengine/cpulimit.git
+  ignore = dirty
+[submodule "submodules/cli/git-license"]
+	path = submodules/cli/git-license
+	url = https://github.com/lucperkins/git-license
+  ignore = dirty
+[submodule "submodules/cli/quietnet"]
+	path = submodules/cli/quietnet
+	url = git@github.com:Katee/quietnet.git
+  ignore = dirty
+[submodule "submodules/cli/soundCLI"]
+	path = submodules/cli/soundCLI
+	url = git://github.com/rekado/soundCLI.git
+  ignore = dirty
+[submodule "submodules/cli/syn"]
+	path = submodules/cli/syn
+	url = git@github.com:stephencelis/syn.git
+  ignore = dirty
+[submodule "submodules/osx/groove-dl"]
+	path = submodules/osx/groove-dl
+	url = git@github.com:jacktheripper51/groove-dl.git
+  ignore = dirty
+[submodule "submodules/osx/yo-app"]
+	path = submodules/osx/yo-app
+	url = git@github.com:sindresorhus/yo-app.git
+  ignore = dirty
+[submodule "submodules/osx/youtube-viewer"]
+	path = submodules/osx/youtube-viewer
+	url = git://github.com/trizen/youtube-viewer.git
+  ignore = dirty
+[submodule "submodules/chrome/Github-Omnibox"]
+	path = submodules/chrome/Github-Omnibox
+	url = git@github.com:ProLoser/Github-Omnibox.git
+	branch = gh-pages
+  ignore = dirty
+[submodule "submodules/chrome/chrome-github-avatars"]
+	path = submodules/chrome/chrome-github-avatars
+	url = git://github.com/anasnakawa/chrome-github-avatars.git
+  ignore = dirty
+[submodule "submodules/chrome/github-annotator"]
+	path = submodules/chrome/github-annotator
+	url = git@github.com:mesuutt/github-annotator.git
+  ignore = dirty
+[submodule "submodules/chrome/github-gmail"]
+	path = submodules/chrome/github-gmail
+	url = git@github.com:muan/github-gmail.git
+  ignore = dirty
+[submodule "submodules/chrome/github-pr-helper"]
+	path = submodules/chrome/github-pr-helper
+	url = https://github.com/petebacondarwin/github-pr-helper.git
+  ignore = dirty
+[submodule "submodules/chrome/jquery-audit"]
+	path = submodules/chrome/jquery-audit
+	url = git://github.com/zertosh/jquery-audit.git
+  ignore = dirty
+[submodule "submodules/chrome/mdn-search"]
+	path = submodules/chrome/mdn-search
+	url = https://github.com/ChaitanyaPramod/mdn-search.git
+  ignore = dirty
+[submodule "submodules/chrome/vimium"]
+	path = submodules/chrome/vimium
+	url = git://github.com/philc/vimium.git
+  ignore = all
+[submodule "submodules/chrome/blame_parent"]
+	path = submodules/chrome/blame_parent
+	url = git@github.com:chancancode/blame_parent.git
+  ignore = dirty
+[submodule "submodules/cli/speedread"]
+	path = submodules/cli/speedread
+	url = git@github.com:pasky/speedread.git
+  ignore = dirty
+[submodule "submodules/chrome/jetzt"]
+	path = submodules/chrome/jetzt
+	url = git@github.com:ds300/jetzt.git
+  ignore = dirty
+[submodule "submodules/chrome/isometric-contributions"]
+	path = submodules/chrome/isometric-contributions
+	url = git@github.com:jasonlong/isometric-contributions.git
+  ignore = dirty
+[submodule "submodules/chrome/zero-base-themes"]
+	path = submodules/chrome/zero-base-themes
+	url = git@github.com:mauricecruz/zero-base-themes.git
+  ignore = dirty
+[submodule "submodules/chrome/github-notifier-chrome"]
+	path = submodules/chrome/github-notifier-chrome
+	url = git@github.com:sindresorhus/github-notifier-chrome.git
+  ignore = dirty
+[submodule "submodules/cli/git-plugins"]
+	path = submodules/cli/git-plugins
+	url = git@github.com:afeld/git-plugins.git
+  ignore = dirty
+[submodule "submodules/cli/gifify"]
+	path = submodules/cli/gifify
+	url = git@github.com:jclem/gifify.git
+  ignore = dirty
+[submodule "submodules/cli/git-hooks"]
+	path = submodules/cli/git-hooks
+	url = git@github.com:icefox/git-hooks.git
+  ignore = dirty
+[submodule "submodules/cli/Vundle.vim"]
+	path = submodules/cli/Vundle.vim
+	url = https://github.com/gmarik/Vundle.vim.git
+  ignore = dirty
+[submodule "submodules/chrome/octotree"]
+	path = submodules/chrome/octotree
+	url = https://github.com/buunguyen/octotree.git
+  ignore = dirty
+[submodule "submodules/cli/compleat"]
+	path = submodules/cli/compleat
+	url = https://github.com/mbrubeck/compleat.git
+  ignore = dirty
+[submodule "submodules/cli/mvb"]
+	path = submodules/cli/mvb
+	url = https://github.com/bfontaine/mvb
+  ignore = dirty
+[submodule "submodules/cli/ttygif"]
+	path = submodules/cli/ttygif
+	url = https://github.com/icholy/ttygif.git
+  ignore = dirty
+[submodule "submodules/chrome/YouTubeCenter"]
+	path = submodules/chrome/YouTubeCenter
+	url = https://github.com/YePpHa/YouTubeCenter.git
+  ignore = dirty
+[submodule "submodules/osx/IDE-Preferences"]
+	path = submodules/osx/IDE-Preferences
+	url = https://github.com/Pivotal-Boulder/IDE-Preferences.git
+  ignore = dirty
+[submodule "submodules/chrome/require-navigator"]
+	path = submodules/chrome/require-navigator
+	url = https://github.com/lxe/require-navigator.git
+  ignore = dirty
+[submodule "submodules/chrome/tab-snooze"]
+	path = submodules/chrome/tab-snooze
+	url = https://github.com/athyuttamre/tab-snooze.git
+  ignore = dirty
+[submodule "submodules/chrome/uBlock"]
+	path = submodules/chrome/uBlock
+	url = https://github.com/gorhill/uBlock.git
+  ignore = dirty
+[submodule "submodules/chrome/chrome-tab-modifier"]
+	path = submodules/chrome/chrome-tab-modifier
+	url = https://github.com/sylouuu/chrome-tab-modifier.git
+  ignore = dirty
+[submodule "submodules/chrome/polymer-ready-chrome-extension"]
+	path = submodules/chrome/polymer-ready-chrome-extension
+	url = https://github.com/beaufortfrancois/polymer-ready-chrome-extension.git
+  ignore = dirty
+[submodule "submodules/chrome/scrollbar-diet"]
+	path = submodules/chrome/scrollbar-diet
+	url = git://github.com/pirxpilot/scrollbar-diet.git
+  ignore = dirty
+[submodule "submodules/chrome/grooveshark-enhancement-suite"]
+	path = submodules/chrome/grooveshark-enhancement-suite
+	url = git://github.com/theabraham/grooveshark-enhancement-suite.git
+  ignore = dirty
+[submodule "submodules/chrome/github-improved"]
+	path = submodules/chrome/github-improved
+	url = git://github.com/johan/github-improved.git
+  ignore = dirty
+[submodule "submodules/chrome/Looks-Good-To-Me"]
+	path = submodules/chrome/Looks-Good-To-Me
+	url = https://github.com/nikolaiwarner/Looks-Good-To-Me.git
+  ignore = dirty
+[submodule "submodules/chrome/github-cue"]
+	path = submodules/chrome/github-cue
+	url = https://github.com/punchagan/github-cue.git
+  ignore = dirty

@@ -1,0 +1,1269 @@
+<configuration>
+  <namespace name="playback">
+    <value name="repeat_mode">
+      <string>repeat_none</string>
+    </value>
+    <value name="shuffle_mode">
+      <string>shuffle_off</string>
+    </value>
+  </namespace>
+  <namespace name="interface">
+    <value name="last_context_page">
+      <string>lastfm-recommendations</string>
+    </value>
+    <value name="show_context_pane">
+      <boolean>true</boolean>
+    </value>
+    <namespace name="panes">
+      <namespace name="albumartist">
+        <namespace name="browser">
+          <namespace name="top">
+            <namespace name="3">
+              <value name="position">
+                <int>180</int>
+              </value>
+            </namespace>
+            <namespace name="2">
+              <value name="position">
+                <int>180</int>
+              </value>
+            </namespace>
+            <namespace name="1">
+              <value name="position">
+                <int>180</int>
+              </value>
+            </namespace>
+            <value name="position">
+              <int>328</int>
+            </value>
+          </namespace>
+        </namespace>
+      </namespace>
+      <namespace name="podcast">
+        <namespace name="browser">
+          <namespace name="left">
+            <namespace name="1">
+              <value name="position">
+                <int>328</int>
+              </value>
+            </namespace>
+            <value name="position">
+              <int>275</int>
+            </value>
+          </namespace>
+        </namespace>
+      </namespace>
+      <namespace name="iradio">
+        <namespace name="browser">
+          <namespace name="left">
+            <value name="position">
+              <int>275</int>
+            </value>
+          </namespace>
+        </namespace>
+      </namespace>
+    </namespace>
+  </namespace>
+  <namespace name="player_window">
+    <value name="source_view_width">
+      <int>175</int>
+    </value>
+    <value name="seek_slider_width">
+      <int>175</int>
+    </value>
+    <value name="disable_album_grid">
+      <boolean>false</boolean>
+    </value>
+    <value name="maximized">
+      <boolean>false</boolean>
+    </value>
+    <value name="x_pos">
+      <int>126</int>
+    </value>
+    <value name="y_pos">
+      <int>22</int>
+    </value>
+    <value name="width">
+      <int>1024</int>
+    </value>
+    <value name="height">
+      <int>700</int>
+    </value>
+    <value name="show_cover_art">
+      <boolean>true</boolean>
+    </value>
+  </namespace>
+  <namespace name="sources">
+    <namespace name="MusicLibrarySource-Library">
+      <value name="copy-on-import">
+        <boolean>false</boolean>
+      </value>
+      <value name="move-on-info-save">
+        <boolean>false</boolean>
+      </value>
+      <value name="expanded">
+        <boolean>true</boolean>
+      </value>
+      <value name="library-location">
+        <string>/Users/leoj/Music</string>
+      </value>
+    </namespace>
+    <namespace name="VideoLibrarySource-VideoLibrary">
+      <value name="copy-on-import">
+        <boolean>false</boolean>
+      </value>
+      <value name="expanded">
+        <boolean>true</boolean>
+      </value>
+      <value name="library-location">
+        <string>/Users/leoj/Videos</string>
+      </value>
+    </namespace>
+    <namespace name="AudiobookLibrarySource-AudiobookLibrary">
+      <value name="expanded">
+        <boolean>true</boolean>
+      </value>
+      <value name="folder_pattern">
+        <string>%author% - %book_title%</string>
+      </value>
+      <value name="file_pattern">
+        <string>%title%</string>
+      </value>
+      <value name="library-location">
+        <string>/Users/leoj/Audiobooks</string>
+      </value>
+    </namespace>
+    <namespace name="InternetRadioSource-internet-radio">
+      <value name="expanded">
+        <boolean>true</boolean>
+      </value>
+    </namespace>
+    <namespace name="PodcastSource-PodcastLibrary">
+      <value name="library-location">
+        <string>/Users/leoj/Podcasts</string>
+      </value>
+      <value name="expanded">
+        <boolean>true</boolean>
+      </value>
+    </namespace>
+  </namespace>
+  <namespace name="plugins">
+    <namespace name="lastfm">
+      <value name="session_key">
+        <string />
+      </value>
+      <value name="subscriber">
+        <boolean>false</boolean>
+      </value>
+      <value name="username">
+        <string />
+      </value>
+      <value name="first_run">
+        <boolean>false</boolean>
+      </value>
+    </namespace>
+    <namespace name="audioscrobbler">
+      <value name="engine_enabled">
+        <boolean>false</boolean>
+      </value>
+    </namespace>
+    <namespace name="alarm">
+      <value name="alarm_hour">
+        <int>22</int>
+      </value>
+      <value name="alarm_minute">
+        <int>38</int>
+      </value>
+      <value name="is_enabled">
+        <boolean>true</boolean>
+      </value>
+      <value name="sleep_timer_duration">
+        <int>1356</int>
+      </value>
+    </namespace>
+  </namespace>
+  <namespace name="player_engine">
+    <value name="equalizer_preset">
+      <string>Rock</string>
+    </value>
+  </namespace>
+  <namespace name="nereid">
+    <namespace name="track_view_columns">
+      <namespace name="MusicLibrarySource-Library">
+        <namespace name="track_number">
+          <value name="order">
+            <int>1</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.037195977404015888</double>
+          </value>
+        </namespace>
+        <namespace name="display_track_title">
+          <value name="order">
+            <int>2</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.30400520154735761</double>
+          </value>
+        </namespace>
+        <namespace name="display_artist_name">
+          <value name="order">
+            <int>3</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.27360468139262206</double>
+          </value>
+        </namespace>
+        <namespace name="display_album_title">
+          <value name="order">
+            <int>4</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.27360468139262206</double>
+          </value>
+        </namespace>
+        <namespace name="comment">
+          <value name="order">
+            <int>5</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="saved_rating">
+          <value name="order">
+            <int>6</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="score">
+          <value name="order">
+            <int>7</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="duration">
+          <value name="order">
+            <int>8</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.08759052743526323</double>
+          </value>
+        </namespace>
+        <namespace name="genre">
+          <value name="order">
+            <int>9</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="year">
+          <value name="order">
+            <int>10</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="file_size">
+          <value name="order">
+            <int>11</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="composer">
+          <value name="order">
+            <int>12</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="play_count">
+          <value name="order">
+            <int>13</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="skip_count">
+          <value name="order">
+            <int>14</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="last_played">
+          <value name="order">
+            <int>15</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="last_skipped">
+          <value name="order">
+            <int>16</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="date_added">
+          <value name="order">
+            <int>17</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="uri">
+          <value name="order">
+            <int>18</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="mime_type">
+          <value name="order">
+            <int>19</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="license_uri">
+          <value name="order">
+            <int>20</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="display_album_artist_name">
+          <value name="order">
+            <int>21</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.225</double>
+          </value>
+        </namespace>
+        <namespace name="track_and_count">
+          <value name="order">
+            <int>22</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="disc_number">
+          <value name="order">
+            <int>23</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="bpm">
+          <value name="order">
+            <int>24</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="bit_rate">
+          <value name="order">
+            <int>25</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="sample_rate">
+          <value name="order">
+            <int>26</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="bits_per_sample">
+          <value name="order">
+            <int>27</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="conductor">
+          <value name="order">
+            <int>28</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="grouping">
+          <value name="order">
+            <int>29</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="sort">
+          <value name="column">
+            <string>display_track_title</string>
+          </value>
+          <value name="direction">
+            <int>1</int>
+          </value>
+        </namespace>
+      </namespace>
+      <namespace name="InternetRadioSource-internet-radio">
+        <namespace name="genre">
+          <value name="order">
+            <int>1</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="display_track_title">
+          <value name="order">
+            <int>2</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.27953558806808543</double>
+          </value>
+        </namespace>
+        <namespace name="display_artist_name">
+          <value name="order">
+            <int>3</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.29243723059430471</double>
+          </value>
+        </namespace>
+        <namespace name="comment">
+          <value name="order">
+            <int>4</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.39134982329531959</double>
+          </value>
+        </namespace>
+        <namespace name="saved_rating">
+          <value name="order">
+            <int>5</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="play_count">
+          <value name="order">
+            <int>6</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="last_played">
+          <value name="order">
+            <int>7</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="last_skipped">
+          <value name="order">
+            <int>8</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="date_added">
+          <value name="order">
+            <int>9</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="uri">
+          <value name="order">
+            <int>10</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+      </namespace>
+      <namespace name="PlayQueueSource-1">
+        <namespace name="track_number">
+          <value name="order">
+            <int>1</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.03721488595438175</double>
+          </value>
+        </namespace>
+        <namespace name="display_track_title">
+          <value name="order">
+            <int>2</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.30418715593715479</double>
+          </value>
+        </namespace>
+        <namespace name="display_artist_name">
+          <value name="order">
+            <int>3</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.27376844034343956</double>
+          </value>
+        </namespace>
+        <namespace name="display_album_title">
+          <value name="order">
+            <int>4</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.27376844034343956</double>
+          </value>
+        </namespace>
+        <namespace name="comment">
+          <value name="order">
+            <int>5</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="saved_rating">
+          <value name="order">
+            <int>6</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="score">
+          <value name="order">
+            <int>7</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="duration">
+          <value name="order">
+            <int>8</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.087635054021608649</double>
+          </value>
+        </namespace>
+        <namespace name="genre">
+          <value name="order">
+            <int>9</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="year">
+          <value name="order">
+            <int>10</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="file_size">
+          <value name="order">
+            <int>11</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="composer">
+          <value name="order">
+            <int>12</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="play_count">
+          <value name="order">
+            <int>13</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="skip_count">
+          <value name="order">
+            <int>14</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="last_played">
+          <value name="order">
+            <int>15</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="last_skipped">
+          <value name="order">
+            <int>16</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="date_added">
+          <value name="order">
+            <int>17</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="uri">
+          <value name="order">
+            <int>18</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="mime_type">
+          <value name="order">
+            <int>19</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="license_uri">
+          <value name="order">
+            <int>20</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="display_album_artist_name">
+          <value name="order">
+            <int>21</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.225</double>
+          </value>
+        </namespace>
+        <namespace name="track_and_count">
+          <value name="order">
+            <int>22</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="disc_number">
+          <value name="order">
+            <int>23</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="bpm">
+          <value name="order">
+            <int>24</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="bit_rate">
+          <value name="order">
+            <int>25</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="sample_rate">
+          <value name="order">
+            <int>26</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="bits_per_sample">
+          <value name="order">
+            <int>27</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="conductor">
+          <value name="order">
+            <int>28</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="grouping">
+          <value name="order">
+            <int>29</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+      </namespace>
+      <namespace name="SmartPlaylistSource-6">
+        <namespace name="track_number">
+          <value name="width">
+            <double>0.037148646189917908</double>
+          </value>
+        </namespace>
+        <namespace name="display_track_title">
+          <value name="width">
+            <double>0.30361836038103879</double>
+          </value>
+        </namespace>
+        <namespace name="display_artist_name">
+          <value name="width">
+            <double>0.27325652434293513</double>
+          </value>
+        </namespace>
+        <namespace name="display_album_title">
+          <value name="width">
+            <double>0.27325652434293513</double>
+          </value>
+        </namespace>
+        <namespace name="duration">
+          <value name="width">
+            <double>0.087479070060129283</double>
+          </value>
+        </namespace>
+      </namespace>
+      <namespace name="VideoLibrarySource-VideoLibrary">
+        <namespace name="track_number">
+          <value name="order">
+            <int>1</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.03721488595438175</double>
+          </value>
+        </namespace>
+        <namespace name="display_track_title">
+          <value name="order">
+            <int>2</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.44783793735279959</double>
+          </value>
+        </namespace>
+        <namespace name="display_artist_name">
+          <value name="order">
+            <int>3</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.40305414361751962</double>
+          </value>
+        </namespace>
+        <namespace name="comment">
+          <value name="order">
+            <int>4</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="saved_rating">
+          <value name="order">
+            <int>5</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="score">
+          <value name="order">
+            <int>6</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="duration">
+          <value name="order">
+            <int>7</int>
+          </value>
+          <value name="visible">
+            <boolean>true</boolean>
+          </value>
+          <value name="width">
+            <double>0.087635054021608649</double>
+          </value>
+        </namespace>
+        <namespace name="genre">
+          <value name="order">
+            <int>8</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+        <namespace name="year">
+          <value name="order">
+            <int>9</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="file_size">
+          <value name="order">
+            <int>10</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="play_count">
+          <value name="order">
+            <int>11</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="skip_count">
+          <value name="order">
+            <int>12</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="last_played">
+          <value name="order">
+            <int>13</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="last_skipped">
+          <value name="order">
+            <int>14</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="date_added">
+          <value name="order">
+            <int>15</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="uri">
+          <value name="order">
+            <int>16</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="mime_type">
+          <value name="order">
+            <int>17</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="license_uri">
+          <value name="order">
+            <int>18</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.15</double>
+          </value>
+        </namespace>
+        <namespace name="track_and_count">
+          <value name="order">
+            <int>19</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="disc_number">
+          <value name="order">
+            <int>20</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="bit_rate">
+          <value name="order">
+            <int>21</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="sample_rate">
+          <value name="order">
+            <int>22</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="bits_per_sample">
+          <value name="order">
+            <int>23</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.1</double>
+          </value>
+        </namespace>
+        <namespace name="grouping">
+          <value name="order">
+            <int>24</int>
+          </value>
+          <value name="visible">
+            <boolean>false</boolean>
+          </value>
+          <value name="width">
+            <double>0.25</double>
+          </value>
+        </namespace>
+      </namespace>
+      <namespace name="SmartPlaylistSource-8">
+        <namespace name="display_track_title">
+          <value name="width">
+            <double>0.44794919682959627</double>
+          </value>
+        </namespace>
+        <namespace name="display_artist_name">
+          <value name="width">
+            <double>0.40315427714663665</double>
+          </value>
+        </namespace>
+      </namespace>
+    </namespace>
+  </namespace>
+  <namespace name="library">
+    <value name="folder_pattern">
+      <string>%album_artist%%path_sep%%album%</string>
+    </value>
+    <value name="file_pattern">
+      <string>{%track_number%. }%title%</string>
+    </value>
+  </namespace>
+</configuration>

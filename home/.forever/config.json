@@ -1,0 +1,16 @@
+{
+  "root": "/Users/leoj/.forever",
+  "pidPath": "/Users/leoj/.forever/pids",
+  "sockPath": "/Users/leoj/.forever/sock",
+  "loglength": 100,
+  "logstream": false,
+  "columns": [
+    "uid",
+    "command",
+    "script",
+    "forever",
+    "pid",
+    "logfile",
+    "uptime"
+  ]
+}

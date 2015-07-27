@@ -1,0 +1,81 @@
+#!/usr/bin/env ruby
+
+#
+# Description:
+#   Send SMS by e-mail.
+#
+# Authors:
+#   jonahoffline (Jonah Ruiz) <jonah@pixelhipsters.com>
+#   Joel Kuzmarski <leoj3n@gmail.com>
+#
+# Github:
+#   https://github.com/jonahoffline/shell_stuff
+#
+
+require 'mail'
+
+module SpamBitch
+  module Phone
+    def self.carriers
+      { claro: 'vtexto.com', att: 'txt.att.net', tmobile: 'sms.tmobile.net' }
+    end
+
+    def self.send_sms(telephone, msg, carrier)
+      options = {
+        :address        => 'smtp.gmail.com',
+        :port           => 587,
+        :domain         => 'gmail.com',
+        :authentication => 'plain',
+        :user_name      => ENV['GMAIL_USER'],
+        :password       => ENV['GMAIL_PASS'],
+        :enable_starttls_auto => true
+      }
+
+      Mail.defaults do
+        delivery_method :smtp, options
+      end
+
+      mail = Mail.new do
+        from    "#{ENV['GMAIL_USER']}"
+        to      "#{telephone}@#{SpamBitch::Phone.carriers[carrier]}"
+        subject 'Email SMS!'
+        body    " #{msg}"
+      end
+      mail.deliver!
+    end
+
+    def self.sms(carrier='')
+      gateway = carrier.empty? ? carriers[random_carrier] : carriers[carrier]
+      "#{telephone.gsub(/-/, '')}@#{gateway}"
+    end
+  end
+
+  class CLI
+    def self.run
+      klass = self.new
+      klass.capture_input
+      SpamBitch::Phone.send_sms(klass.telephone, klass.msg, klass.carrier.intern) if klass.valid?
+    end
+
+    def valid?
+      !(self.telephone.nil? && self.msg.nil?)
+    end
+
+    def self.attributes
+      %i(telephone msg carrier)
+    end
+
+    def capture_input
+      self.class.class_eval do
+        attributes.map.with_index do |method_name, index|
+          define_method method_name do
+            ARGV[index]
+          end
+        end
+      end
+    end
+  end
+end
+
+SpamBitch::CLI.run
+

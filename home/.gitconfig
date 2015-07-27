@@ -1,0 +1,63 @@
+[include]
+
+  #
+  # Extra personal settings (e.g. name and email).
+  #
+
+  path = .gitconfig_extra
+
+[alias]
+
+  #
+  # http://gitready.com/advanced/2011/10/21/ribbon-and-catchup-reading-new-commits.html
+  #
+
+  ribbon = tag --force _ribbon origin/master
+  catchup = log --patch --reverse --topo-order _ribbon..origin/master
+
+  #
+  # List log of everything I did today for the current repo.
+  #
+
+  today = !git log --since=midnight --author=\"$(git config user.name)\" --oneline
+
+  #
+  # Search for branch.
+  #
+
+  brep = !git branch -a | grep
+
+  #
+  # Revert an applied stash (re-stash).
+  #
+
+  stash-unapply = !git stash show -p | git apply -R
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
+
+[color]
+  ui = auto
+
+[core]
+  trustctime = false
+  ignorecase = false
+  excludesfile = ~/.gitignore_global
+
+[push]
+  default = simple
+
+[merge]
+  tool = vimdiff
+
+[hub]
+  protocol = https
+
+[gh]
+  protocol = https
+

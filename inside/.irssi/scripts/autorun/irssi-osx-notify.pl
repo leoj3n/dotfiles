@@ -1,0 +1,1 @@
+../irssi-osx-notify.pl

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function run_test {
+  local dir="${HOME}/.snd/Engineer"
+
+  local snd=$(
+    ls "${dir}" \
+      | while read x; do echo "`expr $RANDOM % 1000`:$x"; done \
+      | sort -n \
+      | sed 's/[0-9]*://' \
+      | head -1
+  )
+
+  afplay -v 0.3 "${dir}/${snd}" 2>&1 &
+}
+
+case "${1}" in
+  --about )
+    echo -n "On commit, play a random sound."
+    ;;
+  * )
+    run_test "$@"
+    ;;
+esac

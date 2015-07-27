@@ -1,0 +1,1 @@
+../../../inside/src/osx/Startup.app

@@ -1,0 +1,11 @@
+#2
+[ "$NAVE_DEBUG" != "" ] && set -x || true
+if [ "$NAVE_LOGIN" != "" ]; then
+  [ -f ~/.bash_profile ] && . ~/.bash_profile || true
+  [ -f ~/.bash_login ] && .  ~/.bash_login || true
+  [ -f ~/.profile ] && . ~/.profile || true
+else
+  [ -f ~/.bashrc ] && . ~/.bashrc || true
+fi
+export PATH=$NAVEPATH:$PATH
+[ -f ~/.naverc ] && . ~/.naverc || true

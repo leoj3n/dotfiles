@@ -1,0 +1,7 @@
+{
+  "command": "grunt debug",
+  "cwd": "/Users/leoj/src/chrome/extensions/content-scripts",
+  "env": {
+    "PATH": "/Users/leoj/.rvm/gems/ruby-2.0.0-p247/bin:/Users/leoj/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/leoj/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/leoj/.rvm/bin:/Users/leoj/.rvm/bin:/Users/leoj/perl5/perlbrew/bin:/Users/leoj/perl5/perlbrew/perls/perl-5.16.0/bin:/usr/local/mysql/bin:/usr/local/opt/php54/bin:/Users/leoj/.composer/bin:/Users/leoj/.go/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:/Users/leoj/bin:/Users/leoj/bin/git-plugins:/opt/local/bin:/usr/local/bin:/usr/local/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+  }
+}

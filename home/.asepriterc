@@ -1,0 +1,167 @@
+[DataRecovery]
+
+[GfxMode]
+Maximized = no
+Width = 1276
+Height = 756
+Depth = 32
+ScreenScale = 2
+
+[Updater]
+Inits = 2
+Uuid = 2d48301c5c72923418bdd99af7ee74beef5478dd
+LastCheck = 1393784654
+WaitDays = 1
+Exits = 2
+
+[layout:main_window]
+colorbarsplitter = 52
+
+[MiniEditor]
+Enabled = yes
+WindowPos = 461 269 159 94
+
+[ColorBar]
+FG = index{38}
+BG = index{0}
+
+[Tools]
+CursorColor = mask
+Tiled = 0
+
+[Grid]
+SnapTo = no
+Visible = no
+Bounds = 0 0 16 16
+Color = rgb{0,0,255}
+
+[PixelGrid]
+Visible = no
+Color = rgb{200,200,200}
+
+[Onionskin]
+Enabled = no
+PrevFrames = 1
+NextFrames = 0
+OpacityBase = 128
+OpacityStep = 32
+
+[NewSprite]
+Type = 2
+Width = 320
+Height = 240
+Background = 3
+
+[ConfigureTool]
+WindowPos = 30 147 234 119
+
+[InvertColor]
+WindowPos = 287 128 64 123
+Preview = yes
+
+[FileSelect]
+CurrentDirectory = /Users/leoj/Pictures
+
+[RecentFiles]
+Filename00 = /Users/leoj/Pictures/Sprite-0001.png
+
+[RecentPaths]
+Path00 = /Users/leoj/Pictures
+
+[Tool:blur]
+Opacity = 255
+Tolerance = 0
+PenType = 0
+PenSize = 16
+PenAngle = 0
+PreviewFilled = no
+
+[Tool:contour]
+Opacity = 255
+Tolerance = 0
+PenType = 0
+PenSize = 1
+PenAngle = 0
+PreviewFilled = no
+
+[Tool:curve]
+Opacity = 255
+Tolerance = 0
+PenType = 0
+PenSize = 1
+PenAngle = 0
+PreviewFilled = no
+
+[Tool:eraser]
+Opacity = 255
+Tolerance = 0
+PenType = 0
+PenSize = 8
+PenAngle = 0
+PreviewFilled = no
+
+[Tool:filled_ellipse]
+Opacity = 255
+Tolerance = 0
+PenType = 0
+PenSize = 1
+PenAngle = 0
+PreviewFilled = no
+
+[Tool:jumble]
+Opacity = 255
+Tolerance = 0
+PenType = 0
+PenSize = 16
+PenAngle = 0
+PreviewFilled = no
+
+[Tool:lasso]
+Opacity = 255
+Tolerance = 0
+PenType = 0
+PenSize = 1
+PenAngle = 0
+PreviewFilled = no
+
+[Tool:paint_bucket]
+Opacity = 255
+Tolerance = 0
+PenType = 1
+PenSize = 9
+PenAngle = 83
+PreviewFilled = no
+
+[Tool:pencil]
+Opacity = 255
+Tolerance = 0
+PenType = 0
+PenSize = 1
+PenAngle = 0
+PreviewFilled = no
+
+[Tool:polygon]
+Opacity = 255
+Tolerance = 0
+PenType = 0
+PenSize = 1
+PenAngle = 0
+PreviewFilled = no
+
+[Tool:rectangle]
+Opacity = 255
+Tolerance = 0
+PenType = 0
+PenSize = 1
+PenAngle = 0
+PreviewFilled = no
+
+[Tool:spray]
+Opacity = 255
+Tolerance = 0
+PenType = 0
+PenSize = 1
+PenAngle = 0
+SprayWidth = 16
+SpraySpeed = 32
+PreviewFilled = no

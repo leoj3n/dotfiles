@@ -1,0 +1,5 @@
+browser          "$BROWSER"
+
+download-path    "~/Downloads/1pod/%n"
+max-downloads    2
+player           "mplayer"

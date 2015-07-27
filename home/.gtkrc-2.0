@@ -1,0 +1,10 @@
+include "/usr/local/Cellar/gtk-engines/2.20.2/share/themes/Clearlooks/gtk-2.0/gtkrc"
+
+gtk-icon-theme-name="Faenza"
+gtk-toolbar-style=GTK_TOOLBAR_ICONS
+gtk-toolbar-icon-size=GTK_ICON_SIZE_SMALL_TOOLBAR
+gtk-button-images=1
+gtk-menu-images=1
+
+include "/Users/leoj/.gtkrc.mine"
+

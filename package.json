@@ -1,0 +1,26 @@
+{
+  "name": "dotfiles",
+  "version": "0.0.0",
+  "description": "@leoj3n's public castle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leoj3n/dotfiles.git"
+  },
+  "keywords": [
+    "homeshick"
+  ],
+  "author": "Joel Kuzmarski",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/leoj3n/dotfiles/issues"
+  },
+  "homepage": "https://github.com/leoj3n/dotfiles",
+  "devDependencies": {
+    "gh": "*",
+    "gh-gif": "*"
+  }
+}
