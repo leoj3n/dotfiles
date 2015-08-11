@@ -12,8 +12,8 @@
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
     softWrap: true
-    fontSize: 11
     invisibles: {}
+    fontSize: 13
   core:
     themes: [
       "one-light-ui"
@@ -23,3 +23,6 @@
     layoutMode: "Compact"
     fontSize: 10
   "unity-ui": {}
+  "atom-beautify":
+    analytics: false
+  emmet: {}
