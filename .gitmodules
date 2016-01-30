@@ -175,10 +175,6 @@
 	path = submodules/chrome/scrollbar-diet
 	url = git://github.com/pirxpilot/scrollbar-diet.git
   ignore = dirty
-[submodule "submodules/chrome/grooveshark-enhancement-suite"]
-	path = submodules/chrome/grooveshark-enhancement-suite
-	url = git://github.com/theabraham/grooveshark-enhancement-suite.git
-  ignore = dirty
 [submodule "submodules/chrome/github-improved"]
 	path = submodules/chrome/github-improved
 	url = git://github.com/johan/github-improved.git

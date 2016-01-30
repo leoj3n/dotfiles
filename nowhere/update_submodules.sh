@@ -63,7 +63,6 @@ echo 'GitHub Notification Helper for Gmail: ~/.homesick/repos/dotfiles/submodule
 echo 'GitHub Notifier: ~/.homesick/repos/dotfiles/submodules/chrome/github-notifier-chrome/extension'
 echo 'Github Omnibox: ~/.homesick/repos/dotfiles/submodules/chrome/Github-Omnibox'
 echo 'GitHub PR Helper: ~/.homesick/repos/dotfiles/submodules/chrome/github-pr-helper'
-echo 'Grooveshark Enhancement Suite: ~/.homesick/repos/dotfiles/submodules/chrome/grooveshark-enhancement-suite'
 echo 'Isometric Contributions: ~/.homesick/repos/dotfiles/submodules/chrome/isometric-contributions/chrome'
 echo 'jetzt: ~/.homesick/repos/dotfiles/submodules/chrome/jetzt'
 echo 'jQuery Audit: ~/.homesick/repos/dotfiles/submodules/chrome/jquery-audit'
