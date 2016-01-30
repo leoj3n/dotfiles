@@ -42,10 +42,6 @@
 	path = submodules/cli/syn
 	url = git@github.com:stephencelis/syn.git
   ignore = dirty
-[submodule "submodules/osx/groove-dl"]
-	path = submodules/osx/groove-dl
-	url = git@github.com:jacktheripper51/groove-dl.git
-  ignore = dirty
 [submodule "submodules/osx/yo-app"]
 	path = submodules/osx/yo-app
 	url = git@github.com:sindresorhus/yo-app.git
