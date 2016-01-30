@@ -42,10 +42,6 @@
 	path = submodules/cli/syn
 	url = git@github.com:stephencelis/syn.git
   ignore = dirty
-[submodule "submodules/osx/yo-app"]
-	path = submodules/osx/yo-app
-	url = git@github.com:sindresorhus/yo-app.git
-  ignore = dirty
 [submodule "submodules/osx/youtube-viewer"]
 	path = submodules/osx/youtube-viewer
 	url = git://github.com/trizen/youtube-viewer.git
