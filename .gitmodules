@@ -191,3 +191,6 @@
 	path = submodules/chrome/github-cue
 	url = https://github.com/punchagan/github-cue.git
   ignore = dirty
+[submodule "submodules/chrome/bl.ocks.org"]
+	path = submodules/chrome/bl.ocks.org
+	url = https://github.com/mbostock/bl.ocks.org.git

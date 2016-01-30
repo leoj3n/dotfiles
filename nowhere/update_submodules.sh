@@ -78,3 +78,5 @@ echo 'Vimium: ~/.homesick/repos/dotfiles/submodules/chrome/vimium'
 echo 'YouTube Center Developer Build: ~/.homesick/repos/dotfiles/submodules/chrome/YouTubeCenter/build/YouTubeCenter'
 echo 'DevTools Theme: Zero Dark Matrix: ~/.homesick/repos/dotfiles/submodules/chrome/zero-base-themes/theme-extension'
 echo 'GitHub Improved: ~/.homesick/repos/dotfiles/submodules/chrome/github-improved/chrome'
+echo 'bl.ocks.org': ~/.homesick/repos/dotfiles/submodules/chrome/bl.ocks.org/chrome
+
