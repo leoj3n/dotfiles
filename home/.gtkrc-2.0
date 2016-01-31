@@ -1,4 +1,4 @@
-include "/usr/local/Cellar/gtk-engines/2.20.2/share/themes/Clearlooks/gtk-2.0/gtkrc"
+include "/usr/local/Cellar/gtk-engines/2.20.2_1/share/themes/Clearlooks/gtk-2.0/gtkrc"
 
 gtk-icon-theme-name="Faenza"
 gtk-toolbar-style=GTK_TOOLBAR_ICONS
