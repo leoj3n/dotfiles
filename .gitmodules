@@ -182,3 +182,6 @@
 [submodule "submodules/chrome/bl.ocks.org"]
 	path = submodules/chrome/bl.ocks.org
 	url = https://github.com/mbostock/bl.ocks.org.git
+[submodule "submodules/chrome/text-aid-too"]
+	path = submodules/chrome/text-aid-too
+	url = https://github.com/smblott-github/text-aid-too.git

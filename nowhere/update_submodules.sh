@@ -5,7 +5,7 @@ DOTFILES="${HOME}/.homesick/repos/dotfiles"
 echo
 echo 'Requirements:'
 echo '  - npm'
-echo '  - ant'
+echo '  - ant: brew cask install java; brew install ant'
 echo '  - grunt: npm install -g grunt-cli'
 echo '  - coffescript: npm install -g coffee-script'
 
@@ -46,6 +46,12 @@ echo
 cd "${DOTFILES}/submodules/chrome/vimium" && npm install && cake build
 
 echo
+echo 'Build Text-Aid-Too...'
+echo
+
+cd "${DOTFILES}/submodules/chrome/text-aid-too" && make build && npm install -g .
+
+echo
 echo 'Build devtools theme (zero dark matrix)...'
 echo
 
@@ -74,6 +80,7 @@ echo 'Scrollbar diet: ~/.homesick/repos/dotfiles/submodules/chrome/scrollbar-die
 echo 'Tab Snooze: ~/.homesick/repos/dotfiles/submodules/chrome/tab-snooze'
 echo 'uBlock: ~/.homesick/repos/dotfiles/submodules/chrome/uBlock/dist/build/uBlock0.chromium'
 echo 'Vimium: ~/.homesick/repos/dotfiles/submodules/chrome/vimium'
+echo 'Text-Aid-Too: ~/.homesick/repos/dotfiles/submodules/chrome/text-aid-too/chrome-extension'
 echo 'YouTube Center Developer Build: ~/.homesick/repos/dotfiles/submodules/chrome/YouTubeCenter/build/YouTubeCenter'
 echo 'DevTools Theme: Zero Dark Matrix: ~/.homesick/repos/dotfiles/submodules/chrome/zero-base-themes/theme-extension'
 echo 'GitHub Improved: ~/.homesick/repos/dotfiles/submodules/chrome/github-improved/chrome'
