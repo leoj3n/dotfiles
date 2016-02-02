@@ -84,5 +84,6 @@ echo 'Text-Aid-Too: ~/.homesick/repos/dotfiles/submodules/chrome/text-aid-too/ch
 echo 'YouTube Center Developer Build: ~/.homesick/repos/dotfiles/submodules/chrome/YouTubeCenter/build/YouTubeCenter'
 echo 'DevTools Theme: Zero Dark Matrix: ~/.homesick/repos/dotfiles/submodules/chrome/zero-base-themes/theme-extension'
 echo 'GitHub Improved: ~/.homesick/repos/dotfiles/submodules/chrome/github-improved/chrome'
-echo 'bl.ocks.org': ~/.homesick/repos/dotfiles/submodules/chrome/bl.ocks.org/chrome
+echo 'bl.ocks.org: ~/.homesick/repos/dotfiles/submodules/chrome/bl.ocks.org/chrome'
+echo 'keysocket: ~/.homesick/repos/dotfiles/submodules/chrome/keysocket/extension'
 

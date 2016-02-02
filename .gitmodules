@@ -185,3 +185,6 @@
 [submodule "submodules/chrome/text-aid-too"]
 	path = submodules/chrome/text-aid-too
 	url = https://github.com/smblott-github/text-aid-too.git
+[submodule "submodules/chrome/keysocket"]
+	path = submodules/chrome/keysocket
+	url = https://github.com/borismus/keysocket.git
