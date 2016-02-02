@@ -7,6 +7,7 @@ echo 'Requirements:'
 echo '  - npm'
 echo '  - ant: brew cask install java; brew install ant'
 echo '  - grunt: npm install -g grunt-cli'
+echo '  - gulp: npm install --g gulp-cli'
 echo '  - coffescript: npm install -g coffee-script'
 
 echo
@@ -31,7 +32,7 @@ echo
 echo 'Unzip Octotree...'
 echo
 
-cd "${DOTFILES}/submodules/chrome/octotree/dist" && rm -rf 'chrome' && unzip 'chrome.zip' -d 'chrome'
+cd "${DOTFILES}/submodules/chrome/octotree" && npm install && gulp build
 
 echo
 echo 'Build uBlock...'
@@ -73,7 +74,7 @@ echo 'Isometric Contributions: ~/.homesick/repos/dotfiles/submodules/chrome/isom
 echo 'jetzt: ~/.homesick/repos/dotfiles/submodules/chrome/jetzt'
 echo 'jQuery Audit: ~/.homesick/repos/dotfiles/submodules/chrome/jquery-audit'
 echo 'MDN Search: ~/.homesick/repos/dotfiles/submodules/chrome/mdn-search'
-echo 'Octotree: ~/.homesick/repos/dotfiles/submodules/chrome/octotree/dist/chrome'
+echo 'Octotree: ~/.homesick/repos/dotfiles/submodules/chrome/octotree/tmp/chrome'
 echo 'Polymer Ready: ~/.homesick/repos/dotfiles/submodules/chrome/polymer-ready-chrome-extension/src'
 echo 'Github Node.js require() navigator: ~/.homesick/repos/dotfiles/submodules/chrome/require-navigator'
 echo 'Scrollbar diet: ~/.homesick/repos/dotfiles/submodules/chrome/scrollbar-diet'
