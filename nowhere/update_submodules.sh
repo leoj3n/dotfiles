@@ -66,7 +66,6 @@ echo 'GitHub: Blame Parent: ~/.homesick/repos/dotfiles/submodules/chrome/blame_p
 echo 'Avatars for Github: ~/.homesick/repos/dotfiles/submodules/chrome/chrome-github-avatars/app'
 echo 'Tab Modifier: ~/.homesick/repos/dotfiles/submodules/chrome/chrome-tab-modifier/dist'
 echo 'Github Annotator: ~/.homesick/repos/dotfiles/submodules/chrome/github-annotator'
-echo 'GitHub Notification Helper for Gmail: ~/.homesick/repos/dotfiles/submodules/chrome/github-gmail/chrome'
 echo 'GitHub Notifier: ~/.homesick/repos/dotfiles/submodules/chrome/github-notifier-chrome/extension'
 echo 'Github Omnibox: ~/.homesick/repos/dotfiles/submodules/chrome/Github-Omnibox'
 echo 'GitHub PR Helper: ~/.homesick/repos/dotfiles/submodules/chrome/github-pr-helper'

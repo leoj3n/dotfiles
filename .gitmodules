@@ -59,10 +59,6 @@
 	path = submodules/chrome/github-annotator
 	url = git@github.com:mesuutt/github-annotator.git
   ignore = dirty
-[submodule "submodules/chrome/github-gmail"]
-	path = submodules/chrome/github-gmail
-	url = git@github.com:muan/github-gmail.git
-  ignore = dirty
 [submodule "submodules/chrome/github-pr-helper"]
 	path = submodules/chrome/github-pr-helper
 	url = https://github.com/petebacondarwin/github-pr-helper.git
