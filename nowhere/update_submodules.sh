@@ -68,7 +68,6 @@ echo 'Tab Modifier: ~/.homesick/repos/dotfiles/submodules/chrome/chrome-tab-modi
 echo 'Github Annotator: ~/.homesick/repos/dotfiles/submodules/chrome/github-annotator'
 echo 'GitHub Notifier: ~/.homesick/repos/dotfiles/submodules/chrome/github-notifier-chrome/extension'
 echo 'Github Omnibox: ~/.homesick/repos/dotfiles/submodules/chrome/Github-Omnibox'
-echo 'GitHub PR Helper: ~/.homesick/repos/dotfiles/submodules/chrome/github-pr-helper'
 echo 'Isometric Contributions: ~/.homesick/repos/dotfiles/submodules/chrome/isometric-contributions/chrome'
 echo 'jetzt: ~/.homesick/repos/dotfiles/submodules/chrome/jetzt'
 echo 'jQuery Audit: ~/.homesick/repos/dotfiles/submodules/chrome/jquery-audit'
