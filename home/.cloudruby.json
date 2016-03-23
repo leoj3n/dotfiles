@@ -1,0 +1,27 @@
+{
+   "curses": {
+    "colors": {
+      "default": ["white", "panel-black"],
+      "playlist": ["peanut", -1],
+      "playlist_active": ["orange", "black", "bold"],
+      "progress": ["orange", "darkgray"],
+      "progress_bar": ["lust", "black", "underline", "bold", "reverse"],
+      "buffer_bar": ["orange", "panel"],
+      "title": ["flame", "panel-black", "bold"],
+      "artist": ["crimson", "panel-black"],
+      "status": ["pale", "panel-black"]
+    },
+    "palette": {
+      "orange": 202,
+      "flame": 160,
+      "panel-black": 233,
+      "panel": 236,
+      "darkgray": 232,
+      "lust": 166,
+      "crimson": 161,
+      "pale": 59,
+      "peanut": 1
+    }
+  }
+}
+
