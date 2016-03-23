@@ -2,6 +2,12 @@
 -- leoj3n's Hammerspoon config
 --
 
+-- Seed the RNG
+-- math.randomseed(os.time())
+
+-- Ensure the IPC command line client is available
+-- hs.ipc.cliInstall()
+
 function reloadConfig(files)
   doReload = false
   for _,file in pairs(files) do
@@ -36,7 +42,6 @@ local g_nextBtn = nil
 local g_spotifyTimer = nil
 
 function spotifyRender()
-
   if g_artistText then g_artistText:delete() end
   if g_titleText then g_titleText:delete() end
   if g_playBtn then g_playBtn:delete() end
@@ -57,12 +62,12 @@ function spotifyRender()
   g_playBtn = hs.drawing.circle(hs.geometry.rect(g_screen.w / 2, g_screen.h - 35, 18, 18))
   g_playBtn:setFillColor(g_red)
   g_playBtn:setFill(true)
-  g_playBtn:show()
+  --g_playBtn:show()
 
   g_nextBtn = hs.drawing.circle(hs.geometry.rect(g_screen.w / 2, g_screen.h - 19, 18, 18))
   g_nextBtn:setFillColor(g_red)
   g_nextBtn:setFill(true)
-  g_nextBtn:show()
+  --g_nextBtn:show()
 
   g_playBtn:setClickCallback(function()
     hs.spotify.playpause()
@@ -108,10 +113,10 @@ function spotifyUpdate()
   end
 end
 
-spotifyRender()
-g_spotifyTimer = hs.timer.new(hs.timer.seconds(5), spotifyUpdate)
-g_spotifyTimer:start()
-spotifyUpdate()
+-- spotifyRender()
+-- g_spotifyTimer = hs.timer.new(hs.timer.minutes(5), spotifyUpdate)
+-- g_spotifyTimer:start()
+-- spotifyUpdate()
 
 --
 -- Sunrise
@@ -258,3 +263,19 @@ hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "U", function()
   f.h = max.h / 2
   win:setFrame(f)
 end)
+
+--
+-- Developer debug
+--
+
+ -- local function crashifnotmain(reason)
+ -- print("crashifnotmain called with reason", reason) -- may want to remove this, very verbose otherwise
+ --  if not hs.crash.isMainThread() then
+ --    print("not in main thread, crashing")
+ --    hs.crash.crash()
+ --  end
+ -- end
+ -- debug.sethook(crashifnotmain, 'c')
+
+-- collectgarbage("setstepmul", 1000)
+-- collectgarbage("setpause", 1)
