@@ -42,6 +42,7 @@ Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'sumpygump/php-documentor-vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
@@ -51,6 +52,9 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'L9'
 Plugin 'FuzzyFinder'
+" ingo required by AdvancedSorters
+Plugin 'ingo-library', {'rtp': 'autoload/ingo/' }
+Plugin 'AdvancedSorters'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Non-GitHub plugins.
