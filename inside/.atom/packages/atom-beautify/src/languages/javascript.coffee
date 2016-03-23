@@ -72,8 +72,8 @@ module.exports = {
     brace_style:
       type: 'string'
       default: "collapse"
-      enum: ["collapse", "expand", "end-expand", "none"]
-      description: "[collapse|expand|end-expand|none]"
+      enum: ["collapse", "collapse-preserve-inline", "expand", "end-expand", "none"]
+      description: "[collapse|collapse-preserve-inline|expand|end-expand|none]"
     break_chained_methods:
       type: 'boolean'
       default: false
@@ -106,5 +106,10 @@ module.exports = {
       type: 'boolean'
       default: false
       description: "End output with newline"
+    end_with_comma:
+      type: 'boolean'
+      default: false
+      description: "If a terminating comma should be inserted into \
+                  arrays, object literals, and destructured objects."
 
 }

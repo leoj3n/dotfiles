@@ -1,11 +1,11 @@
 {
   "name": "codebug",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "main": "./lib/codebug",
   "description": "Debug with Codebug",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rjocoleman/atom-codebug"
+    "url": "git+https://github.com/rjocoleman/atom-codebug.git"
   },
   "license": "MIT",
   "activationCommands": {
@@ -27,11 +27,11 @@
   "bugs": {
     "url": "https://github.com/rjocoleman/atom-codebug/issues"
   },
-  "homepage": "https://github.com/rjocoleman/atom-codebug",
-  "_id": "codebug@0.2.3",
-  "_shasum": "96d8325a6517e4f4f194b338e8a611d234cb5c3d",
-  "_resolved": "file:../d-115626-22801-15r0yme/package.tgz",
-  "_from": "../d-115626-22801-15r0yme/package.tgz",
+  "homepage": "https://github.com/rjocoleman/atom-codebug#readme",
+  "_id": "codebug@1.0.0",
+  "_shasum": "917ddbc57cb27f4a3a3291b9baba4ea87268c583",
+  "_resolved": "file:../d-116214-70014-iufka2/package.tgz",
+  "_from": "../d-116214-70014-iufka2/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [

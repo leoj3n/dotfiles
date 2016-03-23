@@ -11,6 +11,7 @@ _ = require('lodash')
 module.exports = class Uncrustify extends Beautifier
   name: "Uncrustify"
   options: {
+    Apex: true
     C: true
     "C++": true
     "C#": true
@@ -50,6 +51,8 @@ module.exports = class Uncrustify extends Beautifier
       # Select Uncrustify language
       lang = "C" # Default is C
       switch language
+        when "Apex"
+          lang = "Apex"
         when "C"
           lang = "C"
         when "C++"
@@ -79,7 +82,7 @@ module.exports = class Uncrustify extends Beautifier
         "-l"
         lang
         ], help: {
-        link: "http://sourceforge.net/projects/uncrustify/"
+          link: "http://sourceforge.net/projects/uncrustify/"
         })
         .then(=>
           @readFile(outputFile)

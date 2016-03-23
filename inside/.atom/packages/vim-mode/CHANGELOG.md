@@ -1,5 +1,32 @@
 ## HEAD
 
+## 0.61
+
+* Implemented '(' and ')' sentence motion operators - @jonasws
+
+## 0.60
+
+* Fixed an issue where commands that took one character of input didn't
+  work with characters composed via IME - @jacekkopecky
+* Fixed an issue where the '%' motion would select the wrong range
+  when moving backwards - @jacekkopecky
+
+## 0.59
+
+* Fixed an issue where normal Atom commands and mouse drags couldn't
+  move the cursor to the end of a line - @jacekkopecky
+
+## 0.58
+
+* Fixed repetition of commands executed in visual mode - @jacekkopecky
+* Fixed repetition of indentation commands - @mleeds95
+* Fixed `cc` command's behavior on the file's only line @jacekkopecky
+* Fixed key-binding for return-from-tag - @bronson
+* Implemented shared 'f' and 't' state between editors - @jacekkopecky
+* Added insert-mode commands for copying line above and below - @jacekkopecky
+* Fixed an exception when prefixing a text object with a count - @jacekkopecky
+* Fixed handling of blank lines in the `ip` and `ap` text objects - @MarkusSN
+
 ## 0.57
 
 * Added replace ('R') mode! - @jacekkopecky

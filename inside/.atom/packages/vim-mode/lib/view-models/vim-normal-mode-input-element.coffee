@@ -2,28 +2,24 @@ class VimNormalModeInputElement extends HTMLDivElement
   createdCallback: ->
     @className = "normal-mode-input"
 
-    @editorContainer = document.createElement("div")
-    @editorContainer.className = "editor-container"
-
-    @appendChild(@editorContainer)
-
-  initialize: (@viewModel, opts = {}) ->
+  initialize: (@viewModel, @mainEditorElement, opts = {}) ->
     if opts.class?
-      @editorContainer.classList.add(opts.class)
-
-    if opts.hidden
-      @editorContainer.style.height = "0px"
+      @classList.add(opts.class)
 
     @editorElement = document.createElement "atom-text-editor"
     @editorElement.classList.add('editor')
     @editorElement.getModel().setMini(true)
     @editorElement.setAttribute('mini', '')
-    @editorContainer.appendChild(@editorElement)
+    @appendChild(@editorElement)
 
     @singleChar = opts.singleChar
     @defaultText = opts.defaultText ? ''
 
-    @panel = atom.workspace.addBottomPanel(item: this, priority: 100)
+    if opts.hidden
+      @classList.add('vim-hidden-normal-mode-input')
+      @mainEditorElement.parentNode.appendChild(this)
+    else
+      @panel = atom.workspace.addBottomPanel(item: this, priority: 100)
 
     @focus()
     @handleEvents()
@@ -32,8 +28,11 @@ class VimNormalModeInputElement extends HTMLDivElement
 
   handleEvents: ->
     if @singleChar?
+      compositing = false
       @editorElement.getModel().getBuffer().onDidChange (e) =>
-        @confirm() if e.newText
+        @confirm() if e.newText and not compositing
+      @editorElement.addEventListener 'compositionstart', -> compositing = true
+      @editorElement.addEventListener 'compositionend', -> compositing = false
     else
       atom.commands.add(@editorElement, 'editor:newline', @confirm.bind(this))
 
@@ -55,7 +54,10 @@ class VimNormalModeInputElement extends HTMLDivElement
 
   removePanel: ->
     atom.workspace.getActivePane().activate()
-    @panel.destroy()
+    if @panel?
+      @panel.destroy()
+    else
+      this.remove()
 
 module.exports =
 document.registerElement("vim-normal-mode-input"

@@ -103,7 +103,7 @@ class Delete extends Operator
 class ToggleCase extends Operator
   constructor: (@editor, @vimState, {@complete}={}) ->
 
-  execute: (count=1) ->
+  execute: (count) ->
     if @motion?
       if _.contains(@motion.select(count), true)
         @editor.replaceSelectedText {}, (text) ->
@@ -119,7 +119,7 @@ class ToggleCase extends Operator
         for cursor in @editor.getCursors()
           point = cursor.getBufferPosition()
           lineLength = @editor.lineTextForBufferRow(point.row).length
-          cursorCount = Math.min(count, lineLength - point.column)
+          cursorCount = Math.min(count ? 1, lineLength - point.column)
 
           _.times cursorCount, =>
             point = cursor.getBufferPosition()
@@ -142,7 +142,7 @@ class UpperCase extends Operator
   constructor: (@editor, @vimState) ->
     @complete = false
 
-  execute: (count=1) ->
+  execute: (count) ->
     if _.contains(@motion.select(count), true)
       @editor.replaceSelectedText {}, (text) ->
         text.toUpperCase()
@@ -156,7 +156,7 @@ class LowerCase extends Operator
   constructor: (@editor, @vimState) ->
     @complete = false
 
-  execute: (count=1) ->
+  execute: (count) ->
     if _.contains(@motion.select(count), true)
       @editor.replaceSelectedText {}, (text) ->
         text.toLowerCase()
@@ -170,6 +170,7 @@ class Yank extends Operator
   register: null
 
   constructor: (@editor, @vimState) ->
+    @editorElement = atom.views.getView(@editor)
     @register = settings.defaultRegister()
 
   # Public: Copies the text selected by the given motion.
@@ -178,13 +179,20 @@ class Yank extends Operator
   #
   # Returns nothing.
   execute: (count) ->
+    oldTop = @editorElement.getScrollTop()
+    oldLeft = @editorElement.getScrollLeft()
+    oldLastCursorPosition = @editor.getCursorBufferPosition()
+
     originalPositions = @editor.getCursorBufferPositions()
     if _.contains(@motion.select(count), true)
       text = @editor.getSelectedText()
       startPositions = _.pluck(@editor.getSelectedBufferRanges(), "start")
       newPositions = for originalPosition, i in originalPositions
-        if startPositions[i] and (@vimState.mode is 'visual' or not @motion.isLinewise?())
-          Point.min(startPositions[i], originalPositions[i])
+        if startPositions[i]
+          position = Point.min(startPositions[i], originalPositions[i])
+          if @vimState.mode isnt 'visual' and @motion.isLinewise?()
+            position = new Point(position.row, originalPositions[i].column)
+          position
         else
           originalPosition
     else
@@ -194,6 +202,11 @@ class Yank extends Operator
     @setTextRegister(@register, text)
 
     @editor.setSelectedBufferRanges(newPositions.map (p) -> new Range(p, p))
+
+    if oldLastCursorPosition.isEqual(@editor.getCursorBufferPosition())
+      @editorElement.setScrollLeft(oldLeft)
+      @editorElement.setScrollTop(oldTop)
+
     @vimState.activateNormalMode()
 
 #

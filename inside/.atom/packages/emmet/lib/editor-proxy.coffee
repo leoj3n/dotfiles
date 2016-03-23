@@ -6,6 +6,7 @@ utils       = require 'emmet/lib/utils/common'
 tabStops    = require 'emmet/lib/assets/tabStops'
 resources   = require 'emmet/lib/assets/resources'
 editorUtils = require 'emmet/lib/utils/editor'
+actionUtils = require 'emmet/lib/utils/action'
 
 insertSnippet = (snippet, editor) ->
   atom.packages.getLoadedPackage('snippets')?.mainModule?.insert(snippet, editor)
@@ -201,25 +202,26 @@ module.exports =
     value
 
   getGrammar: ->
-    @editor.getGrammar().name.toLowerCase()
+    @editor.getGrammar().scopeName.toLowerCase()
 
   # Returns the editor's syntax mode.
   getSyntax: ->
-    syntax = @getGrammar().split(' ')[0]
-    unless resources.hasSyntax syntax
-        syntax = "html"
+    scope = @getCurrentScope().join(' ')
+    return 'xsl' if ~scope.indexOf('xsl')
+    return 'jsx' if not /\bstring\b/.test(scope) && /\bsource\.(js|ts)x?\b/.test(scope)
 
-    if /\b(javascript|jsx)\b/.test(syntax)
-      syntax = if @getCurrentScope().some((scope) -> /\bstring\b/.test scope) then 'html' else 'jsx'
-      
-    if syntax is 'html'
-      # HTML can contain embedded syntaxes
-      embedded = @getCurrentScope().filter((s) -> /\.embedded\./.test s).pop()
-      if embedded
-        m = embedded.match /source\.(.+?)\.embedded/
-        syntax = m[1] if m
+    sourceSyntax = scope.match(/\bsource\.([\w\-]+)/)?[0]
 
-    return syntax
+    if not /\bstring\b/.test(scope) && sourceSyntax && resources.hasSyntax(sourceSyntax)
+      syntax = sourceSyntax;
+    else
+      # probe syntax based on current selector
+      m = scope.match(/\b(source|text)\.[\w\-\.]+/)
+      syntax = m?[0].split('.').reduceRight (result, token) ->
+          result or (token if resources.hasSyntax token)
+        , null
+
+    actionUtils.detectSyntax(@, syntax or 'html')
 
   getCurrentScope: ->
     range = @_selection.bufferRanges[@_selection.index]
@@ -229,7 +231,7 @@ module.exports =
   #
   # See emmet.setupProfile for more information.
   getProfileName: ->
-    return if @getCurrentScope().some((scope) -> /\bstring\.quoted\b/.test scope) then 'line' else 'html'
+    return if @getCurrentScope().some((scope) -> /\bstring\.quoted\b/.test scope) then 'line' else actionUtils.detectProfile(@)
 
   # Returns the current editor's file path
   getFilePath: ->

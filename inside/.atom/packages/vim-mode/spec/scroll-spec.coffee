@@ -13,6 +13,7 @@ describe "Scrolling", ->
       vimState = editorElement.vimState
       vimState.activateNormalMode()
       vimState.resetNormalMode()
+      jasmine.attachToDOM(element)
 
   keydown = (key, options={}) ->
     options.element ?= editorElement
@@ -20,30 +21,41 @@ describe "Scrolling", ->
 
   describe "scrolling keybindings", ->
     beforeEach ->
-      editor.setText("1\n2\n3\n4\n5\n6\n7\n8\n9\n10")
-      spyOn(editor, 'getFirstVisibleScreenRow').andReturn(2)
-      spyOn(editor, 'getLastVisibleScreenRow').andReturn(8)
-      spyOn(editor, 'scrollToScreenPosition')
+      editor.setText """
+        100
+        200
+        300
+        400
+        500
+        600
+        700
+        800
+        900
+        1000
+      """
 
-    describe "the ctrl-e keybinding", ->
-      beforeEach ->
-        spyOn(editor, 'getCursorScreenPosition').andReturn({row: 4, column: 0})
-        spyOn(editor, 'setCursorScreenPosition')
+      editor.setCursorBufferPosition([1, 2])
+      editorElement.setHeight(editorElement.getHeight() * 4 / 10)
+      expect(editor.getVisibleRowRange()).toEqual [0, 4]
 
-      it "moves the screen down by one and keeps cursor onscreen", ->
+    describe "the ctrl-e and ctrl-y keybindings", ->
+      it "moves the screen up and down by one and keeps cursor onscreen", ->
         keydown('e', ctrl: true)
-        expect(editor.scrollToScreenPosition).toHaveBeenCalledWith([7, 0])
-        expect(editor.setCursorScreenPosition).toHaveBeenCalledWith([6, 0])
+        expect(editor.getFirstVisibleScreenRow()).toBe 1
+        expect(editor.getLastVisibleScreenRow()).toBe 5
+        expect(editor.getCursorScreenPosition()).toEqual [2, 2]
 
-    describe "the ctrl-y keybinding", ->
-      beforeEach ->
-        spyOn(editor, 'getCursorScreenPosition').andReturn({row: 6, column: 0})
-        spyOn(editor, 'setCursorScreenPosition')
+        keydown('2')
+        keydown('e', ctrl: true)
+        expect(editor.getFirstVisibleScreenRow()).toBe 3
+        expect(editor.getLastVisibleScreenRow()).toBe 7
+        expect(editor.getCursorScreenPosition()).toEqual [4, 2]
 
-      it "moves the screen up by one and keeps the cursor onscreen", ->
+        keydown('2')
         keydown('y', ctrl: true)
-        expect(editor.scrollToScreenPosition).toHaveBeenCalledWith([3, 0])
-        expect(editor.setCursorScreenPosition).toHaveBeenCalledWith([4, 0])
+        expect(editor.getFirstVisibleScreenRow()).toBe 1
+        expect(editor.getLastVisibleScreenRow()).toBe 5
+        expect(editor.getCursorScreenPosition()).toEqual [2, 2]
 
   describe "scroll cursor keybindings", ->
     beforeEach ->
@@ -53,79 +65,83 @@ describe "Scrolling", ->
       editor.setText(text)
 
       spyOn(editor, 'moveToFirstCharacterOfLine')
-      spyOn(editor, 'getLineHeightInPixels').andReturn(20)
-      spyOn(editor, 'setScrollTop')
-      spyOn(editor, 'getHeight').andReturn(200)
-      spyOn(editor, 'getFirstVisibleScreenRow').andReturn(90)
-      spyOn(editor, 'getLastVisibleScreenRow').andReturn(110)
+
+      spyOn(editorElement, 'setScrollTop')
+      editorElement.style.lineHeight = "20px"
+      editorElement.component.sampleFontStyling()
+      editorElement.setHeight(200)
+      spyOn(editorElement, 'getFirstVisibleScreenRow').andReturn(90)
+      spyOn(editorElement, 'getLastVisibleScreenRow').andReturn(110)
 
     describe "the z<CR> keybinding", ->
       keydownCodeForEnter = '\r'
 
       beforeEach ->
-        spyOn(editor, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
+        spyOn(editorElement, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
 
       it "moves the screen to position cursor at the top of the window and moves cursor to first non-blank in the line", ->
         keydown('z')
         keydown(keydownCodeForEnter)
-        expect(editor.setScrollTop).toHaveBeenCalledWith(960)
+        expect(editorElement.setScrollTop).toHaveBeenCalledWith(960)
         expect(editor.moveToFirstCharacterOfLine).toHaveBeenCalled()
 
     describe "the zt keybinding", ->
       beforeEach ->
-        spyOn(editor, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
+        spyOn(editorElement, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
 
       it "moves the screen to position cursor at the top of the window and leave cursor in the same column", ->
         keydown('z')
         keydown('t')
-        expect(editor.setScrollTop).toHaveBeenCalledWith(960)
+        expect(editorElement.setScrollTop).toHaveBeenCalledWith(960)
         expect(editor.moveToFirstCharacterOfLine).not.toHaveBeenCalled()
 
     describe "the z. keybinding", ->
       beforeEach ->
-        spyOn(editor, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
+        spyOn(editorElement, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
 
       it "moves the screen to position cursor at the center of the window and moves cursor to first non-blank in the line", ->
         keydown('z')
         keydown('.')
-        expect(editor.setScrollTop).toHaveBeenCalledWith(900)
+        expect(editorElement.setScrollTop).toHaveBeenCalledWith(900)
         expect(editor.moveToFirstCharacterOfLine).toHaveBeenCalled()
 
     describe "the zz keybinding", ->
       beforeEach ->
-        spyOn(editor, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
+        spyOn(editorElement, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
 
       it "moves the screen to position cursor at the center of the window and leave cursor in the same column", ->
         keydown('z')
         keydown('z')
-        expect(editor.setScrollTop).toHaveBeenCalledWith(900)
+        expect(editorElement.setScrollTop).toHaveBeenCalledWith(900)
         expect(editor.moveToFirstCharacterOfLine).not.toHaveBeenCalled()
 
     describe "the z- keybinding", ->
       beforeEach ->
-        spyOn(editor, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
+        spyOn(editorElement, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
 
       it "moves the screen to position cursor at the bottom of the window and moves cursor to first non-blank in the line", ->
         keydown('z')
         keydown('-')
-        expect(editor.setScrollTop).toHaveBeenCalledWith(860)
+        expect(editorElement.setScrollTop).toHaveBeenCalledWith(860)
         expect(editor.moveToFirstCharacterOfLine).toHaveBeenCalled()
 
     describe "the zb keybinding", ->
       beforeEach ->
-        spyOn(editor, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
+        spyOn(editorElement, 'pixelPositionForScreenPosition').andReturn({top: 1000, left: 0})
 
       it "moves the screen to position cursor at the bottom of the window and leave cursor in the same column", ->
         keydown('z')
         keydown('b')
-        expect(editor.setScrollTop).toHaveBeenCalledWith(860)
+        expect(editorElement.setScrollTop).toHaveBeenCalledWith(860)
         expect(editor.moveToFirstCharacterOfLine).not.toHaveBeenCalled()
 
   describe "horizontal scroll cursor keybindings", ->
     beforeEach ->
-      editor.setWidth(600)
-      editor.setLineHeightInPixels(10)
-      editor.setDefaultCharWidth(10)
+      editorElement.setWidth(600)
+      editorElement.setHeight(600)
+      editorElement.style.lineHeight = "10px"
+      editorElement.style.font = "16px monospace"
+      atom.views.performDocumentPoll()
       text = ""
       for i in [100..199]
         text += "#{i} "
@@ -137,12 +153,12 @@ describe "Scrolling", ->
         editor.setCursorBufferPosition([0, pos])
         keydown('z')
         keydown('s')
-        editor.getScrollLeft()
+        editorElement.getScrollLeft()
 
       startPosition = NaN
 
       beforeEach ->
-        startPosition = editor.getScrollLeft()
+        startPosition = editorElement.getScrollLeft()
 
       it "does nothing near the start of the line", ->
         pos1 = zsPos(1)
@@ -166,17 +182,17 @@ describe "Scrolling", ->
         pos340 = zsPos(340)
         expect(pos340).toBeLessThan(posEnd)
         pos342 = zsPos(342)
-        expect(pos342 - pos340).toEqual(20)
+        expect(pos342 - pos340).toEqual(19)
 
       it "does nothing if all lines are short", ->
         editor.setText('short')
-        startPosition = editor.getScrollLeft()
+        startPosition = editorElement.getScrollLeft()
         pos1 = zsPos(1)
         expect(pos1).toEqual(startPosition)
         expect(editor.getCursorBufferPosition()).toEqual [0, 1]
         pos10 = zsPos(10)
         expect(pos10).toEqual(startPosition)
-        expect(editor.getCursorBufferPosition()).toEqual [0, 5]
+        expect(editor.getCursorBufferPosition()).toEqual [0, 4]
 
 
     describe "the ze keybinding", ->
@@ -184,12 +200,12 @@ describe "Scrolling", ->
         editor.setCursorBufferPosition([0, pos])
         keydown('z')
         keydown('e')
-        editor.getScrollLeft()
+        editorElement.getScrollLeft()
 
       startPosition = NaN
 
       beforeEach ->
-        startPosition = editor.getScrollLeft()
+        startPosition = editorElement.getScrollLeft()
 
       it "does nothing near the start of the line", ->
         pos1 = zePos(1)
@@ -217,14 +233,14 @@ describe "Scrolling", ->
         expect(pos380).toBeLessThan(posEnd)
 
         pos382 = zePos(382)
-        expect(pos382 - pos380).toEqual(20)
+        expect(pos382 - pos380).toEqual(19)
 
       it "does nothing if all lines are short", ->
         editor.setText('short')
-        startPosition = editor.getScrollLeft()
+        startPosition = editorElement.getScrollLeft()
         pos1 = zePos(1)
         expect(pos1).toEqual(startPosition)
         expect(editor.getCursorBufferPosition()).toEqual [0, 1]
         pos10 = zePos(10)
         expect(pos10).toEqual(startPosition)
-        expect(editor.getCursorBufferPosition()).toEqual [0, 5]
+        expect(editor.getCursorBufferPosition()).toEqual [0, 4]

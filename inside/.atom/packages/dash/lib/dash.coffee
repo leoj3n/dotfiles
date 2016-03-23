@@ -15,63 +15,61 @@ plugin = module.exports =
       type: 'object'
       properties: {}
 
+  # Override `exec` for testing.
+  exec: exec
+
   activate: () ->
     atom.commands.add('atom-text-editor', {
-      'dash:shortcut': () => @shortcut(true),
-      'dash:shortcut-alt': () => @shortcut(false),
-      'dash:context-menu': () => @shortcut(true)
+      'dash:shortcut': () => @shortcut(true, false),
+      'dash:shortcut-background': () => @shortcut(true, true),
+      'dash:shortcut-alt': () => @shortcut(false, false),
+      'dash:shortcut-alt-background': () => @shortcut(false, true),
+      'dash:context-menu': () => @shortcut(true, false)
     })
 
-  shortcut: (sensitive) ->
+  shortcut: (sensitive, background) ->
     editor = atom.workspace.getActiveTextEditor()
 
     return if !editor
 
     selection = editor.getLastSelection().getText()
 
-    return plugin.search(selection, sensitive) if selection
+    callback = (error) =>
+      atom.notifications.addError('Unable to launch Dash', {
+        dismissable: true,
+        detail: error.message
+      }) if error
 
-    scopes = editor.getLastCursor().getScopeDescriptor().getScopesArray()
-    currentScope = scopes[scopes.length - 1]
+    if selection
+      return plugin.search(selection, sensitive, background, callback)
 
-    # Search using the current cursor word when the scope is a string,
-    # comment, meta (HTML) or markup (MD), or when there is no active scope.
-    if scopes.length < 2 or /^(?:comment|string|meta|markup)(?:\.|$)/.test(currentScope)
-      return plugin.search(editor.getWordUnderCursor(), sensitive)
+    return plugin.search(editor.getWordUnderCursor(), sensitive, background, callback)
 
-    range = editor.bufferRangeForScopeAtCursor(currentScope)
-
-    # Sometimes the range is unavailable. Fallback to the current word.
-    if range?
-      text = editor.getTextInBufferRange(range)
-    else
-      text = editor.getWordUnderCursor()
-
-    plugin.search(text, sensitive)
-
-  search: (string, sensitive, cb) ->
+  search: (string, sensitive, background, cb) ->
     activeEditor = atom.workspace.getActiveTextEditor()
 
     if sensitive and activeEditor
       path = activeEditor.getPath()
       language = activeEditor.getGrammar().name
 
-    cmd = @getCommand(string, path, language)
+    cmd = @getCommand(string, path, language, background)
 
     # Exec is used because spawn escapes arguments that contain double-quotes
     # and replaces them with backslashes. This interferes with the ability to
     # properly create the child process in windows, since windows will barf
     # on an ampersand that is not contained in double-quotes.
-    return exec(cmd, cb)
+    plugin.exec(cmd, cb)
 
-  getCommand: (string, path, language) ->
+  getCommand: (string, path, language, background) ->
+    uri = @getDashURI(string, path, language, background)
+
     if platform == 'win32'
-      return 'cmd.exe /c start "" "' + @getDashURI(string, path, language) + '"'
+      return 'cmd.exe /c start "" "' + uri + '"'
 
     if platform == 'linux'
-      return @getZealCommand(string, path, language)
+      return 'xdg-open "' + uri + '"'
 
-    return 'open -g "' + @getDashURI(string, path, language) + '"'
+    return 'open -g "' + uri + '"'
 
   getKeywordString: (path, language) ->
     keys = []
@@ -87,20 +85,14 @@ plugin = module.exports =
 
     return keys.map(encodeURIComponent).join(',') if keys.length
 
-  getDashURI: (string, path, language) ->
+  getDashURI: (string, path, language, background) ->
     link = 'dash-plugin://query=' + encodeURIComponent(string)
     keywords = @getKeywordString(path, language)
 
     if keywords
       link += '&keys=' + keywords
 
+    if background
+      link += '&prevent_activation=true'
+
     return link
-
-  getZealCommand: (string, path, language) ->
-    query = string
-    keywords = @getKeywordString(path, language)
-
-    if keywords
-      query = keywords + ':' + query
-
-    return 'zeal --query "' + query + '"'

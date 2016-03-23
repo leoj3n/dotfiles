@@ -13,6 +13,9 @@
 'atom-text-editor.vim-mode.insert-mode':
   'ctrl-w': 'editor:delete-to-beginning-of-word'
   'ctrl-u': 'editor:delete-to-beginning-of-line'
+  'ctrl-y': 'vim-mode:copy-from-line-above'
+  # disabled for compatibility with the common binding for going to the end of the line
+  # 'ctrl-e': 'vim-mode:copy-from-line-below'
 
   'ctrl-r a': 'vim-mode:insert-mode-put'
   'ctrl-r b': 'vim-mode:insert-mode-put'
@@ -71,6 +74,7 @@
   'ctrl-r %': 'vim-mode:insert-mode-put'
   'ctrl-r _': 'vim-mode:insert-mode-put'
   'ctrl-r "': 'vim-mode:insert-mode-put'
+  'ctrl-r escape': 'abort!'
 
 'atom-text-editor.vim-mode.replace-mode':
   'backspace': 'vim-mode:replace-mode-backspace'
@@ -93,9 +97,12 @@
   'E': 'vim-mode:move-to-end-of-whole-word'
   'b': 'vim-mode:move-to-previous-word'
   'B': 'vim-mode:move-to-previous-whole-word'
+  ')': 'vim-mode:move-to-next-sentence'
+  '(': 'vim-mode:move-to-previous-sentence'
   '}': 'vim-mode:move-to-next-paragraph'
   '{': 'vim-mode:move-to-previous-paragraph'
   '0': 'vim-mode:move-to-beginning-of-line'
+  '|': 'vim-mode:move-to-beginning-of-line'
   '^': 'vim-mode:move-to-first-character-of-line'
   '_': 'vim-mode:move-to-first-character-of-line-and-down'
   '$': 'vim-mode:move-to-last-character-of-line'
@@ -208,6 +215,7 @@
 
 'atom-text-editor.vim-mode.normal-mode':
   'i': 'vim-mode:activate-insert-mode'
+  'insert': 'vim-mode:activate-insert-mode'
   'R': 'vim-mode:activate-replace-mode'
   'v': 'vim-mode:activate-characterwise-visual-mode'
   'V': 'vim-mode:activate-linewise-visual-mode'
@@ -226,7 +234,7 @@
   '.': 'vim-mode:repeat'
 
   'ctrl-]': 'symbols-view:go-to-declaration'
-  'ctrl-T': 'symbols-view:return-from-declaration'
+  'ctrl-t': 'symbols-view:return-from-declaration'
 
   'ctrl-a': 'vim-mode:increase'
   'ctrl-x': 'vim-mode:decrease'
@@ -391,3 +399,7 @@
   '" +': 'vim-mode:register-prefix'
   '" %': 'vim-mode:register-prefix'
   '" _': 'vim-mode:register-prefix'
+
+'.tree-view':
+  'g g': 'core:move-to-top'
+  'shift-g': 'core:move-to-bottom'
