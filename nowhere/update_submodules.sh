@@ -14,7 +14,7 @@ echo
 echo 'Updating Submodules...'
 echo
 
-cd "${DOTFILES}" && git submodule init && git submodule update --remote
+cd "${DOTFILES}" && git submodule init && git submodule update --remote --force
 
 echo
 echo 'Setup GitHub Improved'
