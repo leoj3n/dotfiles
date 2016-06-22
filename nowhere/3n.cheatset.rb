@@ -41,11 +41,11 @@ cheatsheet do
   end
 
   category do
-    id 'KeyRemap4MacBook.app'
+    id 'Karabiner.app'
 
     entry do
       name 'Keybaord remappings'
-      notes 'KeyRemap4MacBook.app allows configution of the keyboard.'
+      notes 'Karabiner.app allows configution of the keyboard.'
     end
 
     entry do
@@ -54,19 +54,14 @@ cheatsheet do
       notes 'Or the HYPER key!'
     end
     entry do
-      command 'SHIFT+ESC'
+      command 'RSHIFT+LSHIFT'
       name 'CAPSLOCK'
-      notes 'Because CAPSLOCK bound to delete (see PCKeyboardHack.app).'
+      notes 'Because CAPSLOCK bound to delete (see Seil.app).'
     end
     entry do
       command 'RCMD+LCMD'
       name 'ESC'
       notes 'Quick escape sequence (right must come first).'
-    end
-    entry do
-      command 'CTRL+CTRL'
-      name 'CTRL+SPACE'
-      notes 'Shortcut to launch Spotlight/Alfred/Quicksilver.'
     end
     entry do
       command 'SPACE+asdfghjkl'
@@ -283,45 +278,43 @@ cheatsheet do
   end
 
   category do
-    id 'Moom.app'
+    id 'Hammerspoon.app'
 
     entry do
-      command 'CMD+ALT+W'
-      name 'Laptop preset'
+      command 'HYPER+F'
+      name 'Full'
     end
     entry do
-      command 'CMD+ALT+O'
-      name 'Office preset'
+      command 'HYPER+H'
+      name 'Left'
     end
     entry do
-      command 'CMD+CTRL+W'
-      name 'Start Mooming'
-    end
-
-    entry do
-      name 'Mooming'
-      notes 'The following apply when "Mooming".'
-    end
-
-    entry do
-      command 'DIRECTION'
-      name 'Move up/down/left/right'
+      command 'HYPER+L'
+      name 'Right'
     end
     entry do
-      command 'ALT+DIRECTION'
-      name 'Shrink up/down/left/right'
+      command 'HYPER+J'
+      name 'Lower'
     end
     entry do
-      command 'CTRL+DIRECTION'
-      name 'Grow up/down/left/right'
+      command 'HYPER+K'
+      name 'Upper'
     end
     entry do
-      command 'SPACE'
-      name 'Fill screen'
+      command 'HYPER+U'
+      name 'Top Left'
     end
     entry do
-      command 'CMD+DIRECTION'
-      name 'Half up/down/left/right'
+      command 'HYPER+I'
+      name 'Top Right'
+    end
+    entry do
+      command 'HYPER+N'
+      name 'Bottom Left'
+    end
+    entry do
+      command 'HYPER+M'
+      name 'Bottom Right'
     end
   end
 
