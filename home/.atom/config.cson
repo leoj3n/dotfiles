@@ -2,13 +2,19 @@
   "atom-beautify":
     analytics: false
   core:
+    customFileTypes:
+      "source.component": [
+        "html"
+      ]
+    disabledPackages: [
+      "metrics"
+    ]
     themes: [
       "one-light-ui"
       "solarized-light-syntax"
     ]
   editor:
-    fontFamily: "Menlo"
-    fontSize: 13
+    fontFamily: "Pragmata Pro Mono"
     invisibles: {}
     showIndentGuide: true
     softWrap: true
