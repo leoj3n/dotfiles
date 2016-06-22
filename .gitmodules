@@ -180,3 +180,6 @@
 [submodule "submodules/chrome/keysocket"]
 	path = submodules/chrome/keysocket
 	url = https://github.com/borismus/keysocket.git
+[submodule "submodules/cli/weechat-notification-center"]
+	path = submodules/cli/weechat-notification-center
+	url = https://github.com/sindresorhus/weechat-notification-center.git

@@ -1,0 +1,1 @@
+../../../../submodules/cli/weechat-notification-center/notification_center.py
