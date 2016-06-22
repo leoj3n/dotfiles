@@ -183,3 +183,6 @@
 [submodule "submodules/cli/weechat-notification-center"]
 	path = submodules/cli/weechat-notification-center
 	url = https://github.com/sindresorhus/weechat-notification-center.git
+[submodule "submodules/chrome/refined-twitter"]
+	path = submodules/chrome/refined-twitter
+	url = https://github.com/sindresorhus/refined-twitter.git
