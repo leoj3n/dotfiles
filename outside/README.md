@@ -1,6 +1,6 @@
 # Outside of home
 
-This directory is used symlink files outside of the users home directory (f.ex: `/etc`).
+This directory is used to symlink files outside of the users home directory (f.ex: `/etc`).
 
 ## Adding links to the "outside"
 
