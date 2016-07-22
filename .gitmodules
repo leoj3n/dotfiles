@@ -55,10 +55,6 @@
 	path = submodules/chrome/chrome-github-avatars
 	url = git://github.com/anasnakawa/chrome-github-avatars.git
   ignore = dirty
-[submodule "submodules/chrome/github-annotator"]
-	path = submodules/chrome/github-annotator
-	url = git@github.com:mesuutt/github-annotator.git
-  ignore = dirty
 [submodule "submodules/chrome/jquery-audit"]
 	path = submodules/chrome/jquery-audit
 	url = git://github.com/zertosh/jquery-audit.git
@@ -219,4 +215,65 @@
 [submodule "submodules/chrome/window-size-helper"]
 	path = submodules/chrome/window-size-helper
 	url = https://github.com/lfx/window-size-helper.git
+  ignore = dirty
+[submodule "submodules/chrome/thegreatsuspender"]
+	path = submodules/chrome/thegreatsuspender
+	url = https://github.com/deanoemcke/thegreatsuspender.git
+  ignore = dirty
+[submodule "submodules/chrome/chrome-ext-ytghmd"]
+	path = submodules/chrome/chrome-ext-ytghmd
+	url = https://github.com/pffy/chrome-ext-ytghmd.git
+  ignore = dirty
+[submodule "submodules/chrome/frame-by-frame"]
+	path = submodules/chrome/frame-by-frame
+	url = https://github.com/CalumJEadie/frame-by-frame.git
+  ignore = dirty
+[submodule "submodules/chrome/CKP"]
+	path = submodules/chrome/CKP
+	url = https://github.com/perfectapi/CKP.git
+  ignore = dirty
+[submodule "submodules/chrome/clut-chrome-extension"]
+	path = submodules/chrome/clut-chrome-extension
+	url = https://github.com/harshayburadkar/clut-chrome-extension.git
+  ignore = dirty
+[submodule "submodules/chrome/deluminate"]
+	path = submodules/chrome/deluminate
+	url = https://github.com/abstiles/deluminate.git
+  ignore = dirty
+[submodule "submodules/chrome/gitter-chrome"]
+	path = submodules/chrome/gitter-chrome
+	url = https://github.com/svincent/gitter-chrome.git
+  ignore = dirty
+[submodule "submodules/chrome/chrome-github-mate"]
+	path = submodules/chrome/chrome-github-mate
+	url = https://github.com/camsong/chrome-github-mate.git
+  ignore = dirty
+[submodule "submodules/chrome/lovely-forks"]
+	path = submodules/chrome/lovely-forks
+	url = https://github.com/musically-ut/lovely-forks.git
+  ignore = dirty
+[submodule "submodules/chrome/github-hovercard"]
+	path = submodules/chrome/github-hovercard
+	url = https://github.com/Justineo/github-hovercard.git
+	branch = gh-pages
+  ignore = dirty
+[submodule "submodules/chrome/categoric"]
+	path = submodules/chrome/categoric
+	url = https://github.com/ozlerhakan/categoric.git
+  ignore = dirty
+[submodule "submodules/chrome/octo-preview"]
+	path = submodules/chrome/octo-preview
+	url = https://github.com/DrewML/octo-preview.git
+  ignore = dirty
+[submodule "submodules/chrome/contributors-on-github"]
+	path = submodules/chrome/contributors-on-github
+	url = https://github.com/hzoo/contributors-on-github.git
+  ignore = dirty
+[submodule "submodules/chrome/show-all-github-issues"]
+	path = submodules/chrome/show-all-github-issues
+	url = https://github.com/sindresorhus/show-all-github-issues.git
+  ignore = dirty
+[submodule "submodules/chrome/github-extended"]
+	path = submodules/chrome/github-extended
+	url = https://github.com/onmyway133/github-extended.git
   ignore = dirty

@@ -8,6 +8,7 @@ echo '  - npm'
 echo '  - ant: brew cask install java; brew install ant'
 echo '  - grunt: npm install -g grunt-cli'
 echo '  - gulp: npm install -g gulp-cli'
+echo '  - bower: npm install -g bower'
 echo '  - coffescript: npm install -g coffee-script'
 echo '  - pync: pip install pync'
 
@@ -78,38 +79,64 @@ echo
 cd "${DOTFILES}/submodules/chrome/re-view-chrome" && npm install && grunt build
 
 echo
+echo 'Build CKP...'
+echo
+
+cd "${DOTFILES}/submodules/chrome/CKP" && npm install && bower install && grunt updatelib
+
+echo
+echo 'Build Octo Preview...'
+echo
+
+cd "${DOTFILES}/submodules/chrome/octo-preview" && npm install && npm run build-chrome
+
+echo
 echo 'Finished updating submodules.'
 echo
 
 echo 'Avatars for Github: ~/.homesick/repos/dotfiles/submodules/chrome/chrome-github-avatars/app'
 echo 'bl.ocks.org: ~/.homesick/repos/dotfiles/submodules/chrome/bl.ocks.org/chrome'
+echo 'CKP - KeePass integration for Chrome: ~/.homesick/repos/dotfiles/submodules/chrome/CKP'
+echo 'CLUT: Cycle Last Used Tabs: ~/.homesick/repos/dotfiles/submodules/chrome/clut-chrome-extension'
+echo 'Contributors on Github: ~/.homesick/repos/dotfiles/submodules/chrome/contributors-on-github/src'
+echo 'Deluminate: ~/.homesick/repos/dotfiles/submodules/chrome/deluminate'
 echo 'DevTools Theme: Zero Dark Matrix: ~/.homesick/repos/dotfiles/submodules/chrome/zero-base-themes/theme-extension'
 echo 'Dim Files on GitHub: ~/.homesick/repos/dotfiles/submodules/chrome/dim-files-on-github/extension'
-echo 'Github Annotator: ~/.homesick/repos/dotfiles/submodules/chrome/github-annotator'
+echo 'Emmet Re:view: ~/.homesick/repos/dotfiles/submodules/chrome/re-view-chrome/out'
+echo 'frame by frame: ~/.homesick/repos/dotfiles/submodules/chrome/frame-by-frame/extension'
 echo 'GitHub Blame Parent: ~/.homesick/repos/dotfiles/submodules/chrome/blame_parent'
+echo 'GitHub Categoric: ~/.homesick/repos/dotfiles/submodules/chrome/categoric'
+echo 'GitHub Extended: ~/.homesick/repos/dotfiles/submodules/chrome/github-extended/app'
 echo 'GitHub Improved: ~/.homesick/repos/dotfiles/submodules/chrome/github-improved/chrome'
 echo 'Github Node.js require() navigator: ~/.homesick/repos/dotfiles/submodules/chrome/require-navigator'
 echo 'GitHub Notifier: ~/.homesick/repos/dotfiles/submodules/chrome/github-notifier-chrome/extension'
 echo 'Github Omnibox: ~/.homesick/repos/dotfiles/submodules/chrome/Github-Omnibox'
+echo 'Gitter Helper for GitHub: ~/.homesick/repos/dotfiles/submodules/chrome/gitter-chrome'
+echo 'GitHub Hovercard: ~/.homesick/repos/dotfiles/submodules/chrome/github-hovercard/extensions/chrome'
 echo 'Isometric Contributions: ~/.homesick/repos/dotfiles/submodules/chrome/isometric-contributions/chrome'
 echo 'jetzt: ~/.homesick/repos/dotfiles/submodules/chrome/jetzt'
 echo 'jQuery Audit: ~/.homesick/repos/dotfiles/submodules/chrome/jquery-audit'
 echo 'keysocket: ~/.homesick/repos/dotfiles/submodules/chrome/keysocket/extension'
+echo 'Lovely forks: ~/.homesick/repos/dotfiles/submodules/chrome/lovely-forks'
 echo 'MDN Search: ~/.homesick/repos/dotfiles/submodules/chrome/mdn-search'
 echo 'npm-hub: ~/.homesick/repos/dotfiles/submodules/chrome/npm-hub/extension'
 echo 'OctoEdit: ~/.homesick/repos/dotfiles/submodules/chrome/OctoEdit/dist'
 echo 'OctoLinker: ~/.homesick/repos/dotfiles/submodules/chrome/OctoLinker/dist'
+echo 'Octo Mate: ~/.homesick/repos/dotfiles/submodules/chrome/chrome-github-mate'
+echo 'Octo Preview: ~/.homesick/repos/dotfiles/submodules/chrome/octo-preview/dist/chrome'
 echo 'Octotree: ~/.homesick/repos/dotfiles/submodules/chrome/octotree/tmp/chrome'
 echo 'Polymer Ready: ~/.homesick/repos/dotfiles/submodules/chrome/polymer-ready-chrome-extension/src'
 echo 'Refined Twitter: ~/.homesick/repos/dotfiles/submodules/chrome/refined-twitter/extension'
-echo 'Window Size Helper: ~/.homesick/repos/dotfiles/submodules/chrome/window-size-helper'
-echo 'Emmet Re:view: ~/.homesick/repos/dotfiles/submodules/chrome/re-view-chrome/out'
 echo 'Scrollbar diet: ~/.homesick/repos/dotfiles/submodules/chrome/scrollbar-diet'
+echo 'Show All GitHub Issues: ~/.homesick/repos/dotfiles/submodules/chrome/show-all-github-issues'
 echo 'Show Title Tag: ~/.homesick/repos/dotfiles/submodules/chrome/ChromeShowTitleTag'
 echo 'Tab Modifier: ~/.homesick/repos/dotfiles/submodules/chrome/chrome-tab-modifier/dist'
 echo 'Tab Snooze: ~/.homesick/repos/dotfiles/submodules/chrome/tab-snooze'
 echo 'Text-Aid-Too: ~/.homesick/repos/dotfiles/submodules/chrome/text-aid-too/chrome-extension'
+echo 'The Great Suspender: ~/.homesick/repos/dotfiles/submodules/chrome/thegreatsuspender/src'
 echo 'uBlock: ~/.homesick/repos/dotfiles/submodules/chrome/uBlock/dist/build/uBlock0.chromium'
 echo 'Vimium: ~/.homesick/repos/dotfiles/submodules/chrome/vimium'
+echo 'Window Size Helper: ~/.homesick/repos/dotfiles/submodules/chrome/window-size-helper'
 echo 'YouTube Center Developer Build: ~/.homesick/repos/dotfiles/submodules/chrome/YouTubeCenter/build/YouTubeCenter'
+echo 'YouTube GitHub Markdown Button: ~/.homesick/repos/dotfiles/submodules/chrome/chrome-ext-ytghmd'
 
