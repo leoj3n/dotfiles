@@ -174,15 +174,49 @@
 [submodule "submodules/chrome/bl.ocks.org"]
 	path = submodules/chrome/bl.ocks.org
 	url = https://github.com/mbostock/bl.ocks.org.git
+  ignore = dirty
 [submodule "submodules/chrome/text-aid-too"]
 	path = submodules/chrome/text-aid-too
 	url = https://github.com/smblott-github/text-aid-too.git
+  ignore = dirty
 [submodule "submodules/chrome/keysocket"]
 	path = submodules/chrome/keysocket
 	url = https://github.com/borismus/keysocket.git
+  ignore = dirty
 [submodule "submodules/cli/weechat-notification-center"]
 	path = submodules/cli/weechat-notification-center
 	url = https://github.com/sindresorhus/weechat-notification-center.git
+  ignore = dirty
 [submodule "submodules/chrome/refined-twitter"]
 	path = submodules/chrome/refined-twitter
 	url = https://github.com/sindresorhus/refined-twitter.git
+  ignore = dirty
+[submodule "submodules/chrome/OctoLinker"]
+	path = submodules/chrome/OctoLinker
+	url = https://github.com/OctoLinker/browser-extension.git
+  ignore = dirty
+[submodule "submodules/chrome/npm-hub"]
+	path = submodules/chrome/npm-hub
+	url = https://github.com/zeke/npm-hub.git
+  branch = plain-web-extension
+  ignore = dirty
+[submodule "submodules/chrome/OctoEdit"]
+	path = submodules/chrome/OctoEdit
+	url = https://github.com/DrewML/OctoEdit.git
+  ignore = dirty
+[submodule "submodules/chrome/dim-files-on-github"]
+	path = submodules/chrome/dim-files-on-github
+	url = https://github.com/bfred-it/dim-files-on-github.git
+  ignore = dirty
+[submodule "submodules/chrome/re-view-chrome"]
+	path = submodules/chrome/re-view-chrome
+	url = https://github.com/emmetio/re-view-chrome.git
+  ignore = dirty
+[submodule "submodules/chrome/ChromeShowTitleTag"]
+	path = submodules/chrome/ChromeShowTitleTag
+	url = https://github.com/martindj/ChromeShowTitleTag.git
+  ignore = dirty
+[submodule "submodules/chrome/window-size-helper"]
+	path = submodules/chrome/window-size-helper
+	url = https://github.com/lfx/window-size-helper.git
+  ignore = dirty
