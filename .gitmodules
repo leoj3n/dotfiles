@@ -67,10 +67,6 @@
 	path = submodules/chrome/vimium
 	url = git://github.com/philc/vimium.git
   ignore = all
-[submodule "submodules/chrome/blame_parent"]
-	path = submodules/chrome/blame_parent
-	url = git@github.com:chancancode/blame_parent.git
-  ignore = dirty
 [submodule "submodules/cli/speedread"]
 	path = submodules/cli/speedread
 	url = git@github.com:pasky/speedread.git
@@ -134,10 +130,6 @@
 [submodule "submodules/chrome/require-navigator"]
 	path = submodules/chrome/require-navigator
 	url = https://github.com/lxe/require-navigator.git
-  ignore = dirty
-[submodule "submodules/chrome/tab-snooze"]
-	path = submodules/chrome/tab-snooze
-	url = https://github.com/athyuttamre/tab-snooze.git
   ignore = dirty
 [submodule "submodules/chrome/uBlock"]
 	path = submodules/chrome/uBlock
@@ -236,10 +228,6 @@
 	path = submodules/chrome/clut-chrome-extension
 	url = https://github.com/harshayburadkar/clut-chrome-extension.git
   ignore = dirty
-[submodule "submodules/chrome/deluminate"]
-	path = submodules/chrome/deluminate
-	url = https://github.com/abstiles/deluminate.git
-  ignore = dirty
 [submodule "submodules/chrome/gitter-chrome"]
 	path = submodules/chrome/gitter-chrome
 	url = https://github.com/svincent/gitter-chrome.git
@@ -277,3 +265,45 @@
 	path = submodules/chrome/github-extended
 	url = https://github.com/onmyway133/github-extended.git
   ignore = dirty
+[submodule "submodules/chrome/SnappySnippet"]
+	path = submodules/chrome/SnappySnippet
+	url = https://github.com/kdzwinel/SnappySnippet.git
+  ignore = dirty
+[submodule "submodules/chrome/github-awesome-autocomplete"]
+	path = submodules/chrome/github-awesome-autocomplete
+	url = https://github.com/algolia/github-awesome-autocomplete.git
+  ignore = dirty
+[submodule "submodules/chrome/Github-diff-extension"]
+	path = submodules/chrome/Github-diff-extension
+	url = https://github.com/altryne/Github-diff-extension.git
+  ignore = dirty
+[submodule "submodules/chrome/Form-Editor"]
+	path = submodules/chrome/Form-Editor
+	url = https://github.com/zsxwing/Form-Editor.git
+  ignore = dirty
+[submodule "submodules/chrome/Tab-Extract"]
+	path = submodules/chrome/Tab-Extract
+	url = https://github.com/monting/Tab-Extract.git
+  ignore = dirty
+[submodule "submodules/chrome/github-highlight-selected"]
+	path = submodules/chrome/github-highlight-selected
+	url = https://github.com/Nuclides/github-highlight-selected.git
+  ignore = dirty
+[submodule "submodules/chrome/iZoom"]
+	path = submodules/chrome/iZoom
+	url = https://github.com/joaope/iZoom.git
+  ignore = dirty
+[submodule "submodules/chrome/TabCopy"]
+	path = submodules/chrome/TabCopy
+	url = https://github.com/hansifer/TabCopy.git
+  ignore = dirty
+[submodule "submodules/chrome/chrome-panel-tabs"]
+	path = submodules/chrome/chrome-panel-tabs
+	url = https://github.com/lnikkila/chrome-panel-tabs.git
+  ignore = dirty
+[submodule "submodules/chrome/streamkeys"]
+	path = submodules/chrome/streamkeys
+	url = https://github.com/berrberr/streamkeys.git
+[submodule "submodules/chrome/refined-github"]
+	path = submodules/chrome/refined-github
+	url = https://github.com/sindresorhus/refined-github.git
