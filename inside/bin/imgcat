@@ -1,25 +1,49 @@
 #!/bin/bash
 
+# From: https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgcat
+
+# tmux requires unrecognized OSC sequences to be wrapped with DCS tmux;
+# <sequence> ST, and for all ESCs in <sequence> to be replaced with ESC ESC. It
+# only accepts ESC backslash for ST.
+function print_osc() {
+    if [[ $TERM == screen* ]] ; then
+        printf "\033Ptmux;\033\033]"
+    else
+        printf "\033]"
+    fi
+}
+
+# More of the tmux workaround described above.
+function print_st() {
+    if [[ $TERM == screen* ]] ; then
+        printf "\a\033\\"
+    else
+        printf "\a"
+    fi
+}
+
 # print_image filename inline base64contents
 #   filename: Filename to convey to client
 #   inline: 0 or 1
 #   base64contents: Base64-encoded contents
 function print_image() {
-    printf '\033]1337;File='
+    print_osc
+    printf '1337;File='
     if [[ -n "$1" ]]; then
-      printf 'name='`echo -n "$1" | /usr/bin/base64`";"
+      printf 'name='`echo -n "$1" | base64`";"
     fi
-    if $(/usr/bin/base64 --version | grep GNU > /dev/null)
+    if $(base64 --version 2>&1 | egrep 'fourmilab|GNU' > /dev/null)
     then
       BASE64ARG=-d
     else
       BASE64ARG=-D
     fi
-    echo -n "$3" | /usr/bin/base64 $BASE64ARG | wc -c | awk '{printf "size=%d",$1}'
+    echo -n "$3" | base64 $BASE64ARG | wc -c | awk '{printf "size=%d",$1}'
     printf ";inline=$2"
     printf ":"
     echo -n "$3"
-    printf '\a\n'
+    print_st
+    printf '\n'
 }
 
 function error() {
@@ -75,3 +99,4 @@ if [ $has_stdin = t ]; then
 fi
 
 exit 0
+

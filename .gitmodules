@@ -6,41 +6,17 @@
 	path = submodules/osx/play-button-itunes-patch
 	url = git://github.com/thebitguru/play-button-itunes-patch.git
   ignore = dirty
-[submodule "submodules/cli/selecta"]
-	path = submodules/cli/selecta
-	url = git@github.com:garybernhardt/selecta.git
-  ignore = dirty
-[submodule "submodules/cli/vit"]
-	path = submodules/cli/vit
-	url = https://git.tasktools.org/scm/ex/vit.git
-  ignore = dirty
-[submodule "submodules/cli/brew-cask-dotfile-generator"]
-	path = submodules/cli/brew-cask-dotfile-generator
-	url = git@github.com:seethroughtrees/brew-cask-dotfile-generator.git
-  ignore = dirty
 [submodule "submodules/cli/cloudruby"]
 	path = submodules/cli/cloudruby
 	url = https://github.com/kulpae/cloudruby.git
-  ignore = dirty
-[submodule "submodules/cli/cpulimit"]
-	path = submodules/cli/cpulimit
-	url = git://github.com/opsengine/cpulimit.git
   ignore = dirty
 [submodule "submodules/cli/git-license"]
 	path = submodules/cli/git-license
 	url = https://github.com/lucperkins/git-license
   ignore = dirty
-[submodule "submodules/cli/quietnet"]
-	path = submodules/cli/quietnet
-	url = git@github.com:Katee/quietnet.git
-  ignore = dirty
 [submodule "submodules/cli/soundCLI"]
 	path = submodules/cli/soundCLI
 	url = git://github.com/rekado/soundCLI.git
-  ignore = dirty
-[submodule "submodules/cli/syn"]
-	path = submodules/cli/syn
-	url = git@github.com:stephencelis/syn.git
   ignore = dirty
 [submodule "submodules/osx/youtube-viewer"]
 	path = submodules/osx/youtube-viewer
@@ -67,10 +43,6 @@
 	path = submodules/chrome/vimium
 	url = git://github.com/philc/vimium.git
   ignore = all
-[submodule "submodules/cli/speedread"]
-	path = submodules/cli/speedread
-	url = git@github.com:pasky/speedread.git
-  ignore = dirty
 [submodule "submodules/chrome/jetzt"]
 	path = submodules/chrome/jetzt
 	url = git@github.com:ds300/jetzt.git
@@ -91,10 +63,6 @@
 	path = submodules/cli/git-plugins
 	url = git@github.com:afeld/git-plugins.git
   ignore = dirty
-[submodule "submodules/cli/gifify"]
-	path = submodules/cli/gifify
-	url = git@github.com:jclem/gifify.git
-  ignore = dirty
 [submodule "submodules/cli/git-hooks"]
 	path = submodules/cli/git-hooks
 	url = git@github.com:icefox/git-hooks.git
@@ -107,17 +75,9 @@
 	path = submodules/chrome/octotree
 	url = https://github.com/buunguyen/octotree.git
   ignore = dirty
-[submodule "submodules/cli/compleat"]
-	path = submodules/cli/compleat
-	url = https://github.com/mbrubeck/compleat.git
-  ignore = dirty
 [submodule "submodules/cli/mvb"]
 	path = submodules/cli/mvb
 	url = https://github.com/bfontaine/mvb
-  ignore = dirty
-[submodule "submodules/cli/ttygif"]
-	path = submodules/cli/ttygif
-	url = https://github.com/icholy/ttygif.git
   ignore = dirty
 [submodule "submodules/chrome/YouTubeCenter"]
 	path = submodules/chrome/YouTubeCenter
@@ -304,6 +264,11 @@
 [submodule "submodules/chrome/streamkeys"]
 	path = submodules/chrome/streamkeys
 	url = https://github.com/berrberr/streamkeys.git
+  ignore = dirty
 [submodule "submodules/chrome/refined-github"]
 	path = submodules/chrome/refined-github
 	url = https://github.com/sindresorhus/refined-github.git
+  ignore = dirty
+[submodule "submodules/cli/compleat"]
+	path = submodules/cli/compleat
+	url = https://github.com/mbrubeck/compleat.git
