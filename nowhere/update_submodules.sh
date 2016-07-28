@@ -62,7 +62,7 @@ echo
 cd "${DOTFILES}/submodules/chrome/zero-base-themes" && npm install && grunt
 
 echo
-echo 'Build OctoLinker...'
+echo 'Build OctoLinker (postinstall link error is OK)...'
 echo
 
 cd "${DOTFILES}/submodules/chrome/OctoLinker" && npm install && npm run chrome-build
@@ -77,7 +77,7 @@ echo
 echo 'Build Emmet Re:view...'
 echo
 
-cd "${DOTFILES}/submodules/chrome/re-view-chrome" && npm install && grunt build
+cd "${DOTFILES}/submodules/chrome/re-view-chrome" && npm install && gulp build
 
 echo
 echo 'Build CKP...'
@@ -92,10 +92,10 @@ echo
 cd "${DOTFILES}/submodules/chrome/octo-preview" && npm install && npm run build-chrome
 
 echo
-echo 'Build GitHub Awesome Autocomplete (fail is OK)...'
+echo 'Build GitHub Awesome Autocomplete (Aborted due to key is OK)...'
 echo
 
-cd "${DOTFILES}/submodules/chrome/octo-preview" && npm install && grunt
+cd "${DOTFILES}/submodules/chrome/github-awesome-autocomplete" && npm install && grunt
 
 echo
 echo 'Build iZoom...'
@@ -107,10 +107,10 @@ echo
 echo 'Build Panel Tabs...'
 echo
 
-cd "${DOTFILES}/submodules/chrome/iZoom" && npm install && bower install && gulp build
+cd "${DOTFILES}/submodules/chrome/chrome-panel-tabs" && npm install && bower install && gulp build
 
 echo
-echo 'Build Streamkeys...'
+echo 'Build Streamkeys (JS stack trace OK)...'
 echo
 
 cd "${DOTFILES}/submodules/chrome/streamkeys" && npm install && grunt dev
