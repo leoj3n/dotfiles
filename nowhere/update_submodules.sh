@@ -4,6 +4,7 @@ DOTFILES="${HOME}/.homesick/repos/dotfiles"
 
 echo
 echo 'Requirements:'
+echo '  - make'
 echo '  - npm'
 echo '  - ant: brew cask install java; brew install ant'
 echo '  - grunt: npm install -g grunt-cli'
