@@ -183,7 +183,8 @@
 [submodule "submodules/chrome/CKP"]
 	path = submodules/chrome/CKP
 	url = https://github.com/perfectapi/CKP.git
-  ignore = dirty
+  branch = develop
+  ignore = all
 [submodule "submodules/chrome/clut-chrome-extension"]
 	path = submodules/chrome/clut-chrome-extension
 	url = https://github.com/harshayburadkar/clut-chrome-extension.git
