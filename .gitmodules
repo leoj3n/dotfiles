@@ -266,9 +266,6 @@
 	path = submodules/chrome/refined-github
 	url = https://github.com/sindresorhus/refined-github.git
   ignore = dirty
-[submodule "submodules/cli/compleat"]
-	path = submodules/cli/compleat
-	url = https://github.com/mbrubeck/compleat.git
 [submodule "submodules/cli/awesome-terminal-fonts"]
 	path = submodules/cli/awesome-terminal-fonts
 	url = https://github.com/gabrielelana/awesome-terminal-fonts.git
