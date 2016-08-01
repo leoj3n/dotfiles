@@ -6,10 +6,6 @@
 	path = submodules/osx/play-button-itunes-patch
 	url = git://github.com/thebitguru/play-button-itunes-patch.git
   ignore = dirty
-[submodule "submodules/cli/cloudruby"]
-	path = submodules/cli/cloudruby
-	url = https://github.com/kulpae/cloudruby.git
-  ignore = dirty
 [submodule "submodules/cli/git-license"]
 	path = submodules/cli/git-license
 	url = https://github.com/lucperkins/git-license
