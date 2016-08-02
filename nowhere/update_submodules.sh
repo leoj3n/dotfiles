@@ -62,10 +62,10 @@ echo
 cd "${DOTFILES}/submodules/chrome/zero-base-themes" && npm install && grunt
 
 echo
-echo 'Build OctoLinker (postinstall link error is OK)...'
+echo 'Build OctoLinker...'
 echo
 
-cd "${DOTFILES}/submodules/chrome/OctoLinker" && npm install && npm run chrome-build
+cd "${DOTFILES}/submodules/chrome/OctoLinker" && npm install --ignore-scripts && npm run chrome-build
 
 echo
 echo 'Build OctoEdit...'
