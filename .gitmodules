@@ -254,10 +254,6 @@
 	path = submodules/chrome/TabCopy
 	url = https://github.com/hansifer/TabCopy.git
   ignore = dirty
-[submodule "submodules/chrome/chrome-panel-tabs"]
-	path = submodules/chrome/chrome-panel-tabs
-	url = https://github.com/lnikkila/chrome-panel-tabs.git
-  ignore = dirty
 [submodule "submodules/chrome/streamkeys"]
 	path = submodules/chrome/streamkeys
 	url = https://github.com/berrberr/streamkeys.git
