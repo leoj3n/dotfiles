@@ -1,0 +1,1 @@
+../../submodules/osx/DNSCrypt-Menu/DNSCryptMenu.30s.sh
