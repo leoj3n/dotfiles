@@ -32,6 +32,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'justinmk/vim-sneak'
 Plugin 'groenewege/vim-less'
+Plugin 'Shutnik/jshint2.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-projectile'
 Plugin 'itchyny/lightline.vim'
@@ -162,6 +163,7 @@ set clipboard=unnamed " allow yy, etc. to interact with OS X clipboard
 nmap <F8> :TagbarToggle<CR>
 set pastetoggle=<F4>
 cmap w!! w !sudo tee > /dev/null %
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
