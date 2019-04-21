@@ -9,7 +9,9 @@
     disabledPackages: [
       "metrics"
       "Tern"
+      "vim-mode"
     ]
+    telemetryConsent: "no"
     themes: [
       "one-light-ui"
       "solarized-light-syntax"
@@ -27,9 +29,9 @@
     userId: "30cadf70da12eaa22ed3407e1b05333d71cb432e"
   "one-light-ui":
     fontSize: 10
-    layoutMode: "Compact"
   "release-notes":
     viewedVersion: "0.92.0"
+  "tree-view": {}
   "unity-ui": {}
   welcome:
     showOnStartup: false
