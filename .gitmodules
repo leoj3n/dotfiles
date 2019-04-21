@@ -265,3 +265,6 @@
 [submodule "submodules/cli/awesome-terminal-fonts"]
 	path = submodules/cli/awesome-terminal-fonts
 	url = https://github.com/gabrielelana/awesome-terminal-fonts.git
+[submodule "submodules/osx/DNSCrypt-Menu"]
+	path = submodules/osx/DNSCrypt-Menu
+	url = https://github.com/JayBrown/DNSCrypt-Menu.git
