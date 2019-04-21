@@ -1,21 +1,22 @@
 <?xml version="1.0"?>
-<FileZilla3 version="3.20.1" platform="*nix">
-	<Layout Builddate="2016-08-03" Buildtime="17:49:35">
+<FileZilla3 version="3.24.0" platform="mac">
+	<Layout Builddate="2017-01-13" Buildtime="20:14:47">
 		<Resources>
-			<xrc file="dialogs.xrc" date="1470239549" />
-			<xrc file="menus.xrc" date="1470239549" />
-			<xrc file="netconfwizard.xrc" date="1470239549" />
+			<xrc file="dialogs.xrc" date="1484335044" />
+			<xrc file="menus.xrc" date="1484335044" />
+			<xrc file="netconfwizard.xrc" date="1484335044" />
 			<xrc file="quickconnectbar.xrc" date="1470239549" />
-			<xrc file="settings.xrc" date="1470239549" />
+			<xrc file="settings.xrc" date="1484335044" />
 			<xrc file="toolbar.xrc" date="1470239549" />
-			<xrc file="update.xrc" date="1470239549" />
-			<xrc file="certificate.xrc" date="1470239549" />
-			<xrc file="inputdialog.xrc" date="1470239549" />
-			<xrc file="sitemanager.xrc" date="1470239549" />
+			<xrc file="update.xrc" date="1484335044" />
+			<xrc file="certificate.xrc" date="1484335044" />
+			<xrc file="inputdialog.xrc" date="1484335044" />
+			<xrc file="sitemanager.xrc" date="1484335044" />
 		</Resources>
 		<Language id="en_US" date="">
 			<Font font="0;13;70;90;90;0;.SF NS Text;49" width="779" height="15" />
 			<Dialog name="Site Manager" width="653" />
+			<Dialog name="Settings" width="567" />
 		</Language>
 	</Layout>
 </FileZilla3>
