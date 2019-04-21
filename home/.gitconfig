@@ -56,6 +56,15 @@
 [merge]
   tool = vimdiff
 
+[pager]
+    difftool = true
+
+[diff]
+    tool = icdiff
+
+[difftool "icdiff"]
+    cmd = icdiff --head=5000 --highlight --line-numbers -L \"$BASE\" -L \"$REMOTE\" \"$LOCAL\" \"$REMOTE\"
+
 [hub]
   protocol = https
 
